@@ -1,0 +1,918 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C19A14C190E067F00C4EDD0 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C19A14B190E067F00C4EDD0 /* Reachability.m */; };
+		8C4F5A5118D2C2EF00104AB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4F5A5018D2C2EF00104AB0 /* Foundation.framework */; };
+		8C4F5A5318D2C2EF00104AB0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4F5A5218D2C2EF00104AB0 /* CoreGraphics.framework */; };
+		8C4F5A5518D2C2EF00104AB0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4F5A5418D2C2EF00104AB0 /* UIKit.framework */; };
+		8C4F5A5B18D2C2EF00104AB0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A5918D2C2EF00104AB0 /* InfoPlist.strings */; };
+		8C4F5A5D18D2C2EF00104AB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4F5A5C18D2C2EF00104AB0 /* main.m */; };
+		8C4F5A6118D2C2EF00104AB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4F5A6018D2C2EF00104AB0 /* AppDelegate.m */; };
+		8C4F5A6418D2C2EF00104AB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A6218D2C2EF00104AB0 /* Main.storyboard */; };
+		8C4F5A6718D2C2EF00104AB0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4F5A6618D2C2EF00104AB0 /* ViewController.m */; };
+		8C4F5A6918D2C2EF00104AB0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A6818D2C2EF00104AB0 /* Images.xcassets */; };
+		8C4F5A7018D2C2EF00104AB0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4F5A6F18D2C2EF00104AB0 /* XCTest.framework */; };
+		8C4F5A7118D2C2EF00104AB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4F5A5018D2C2EF00104AB0 /* Foundation.framework */; };
+		8C4F5A7218D2C2EF00104AB0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4F5A5418D2C2EF00104AB0 /* UIKit.framework */; };
+		8C4F5A7A18D2C2EF00104AB0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A7818D2C2EF00104AB0 /* InfoPlist.strings */; };
+		8C4F5A7C18D2C2EF00104AB0 /* ValetAttendantTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4F5A7B18D2C2EF00104AB0 /* ValetAttendantTests.m */; };
+		8C4F5A9F18D2C92700104AB0 /* common_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A8618D2C92700104AB0 /* common_bg.png */; };
+		8C4F5AA018D2C92700104AB0 /* common_bg_iph4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A8718D2C92700104AB0 /* common_bg_iph4@2x.png */; };
+		8C4F5AA118D2C92700104AB0 /* common_bg_iph5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A8818D2C92700104AB0 /* common_bg_iph5@2x.png */; };
+		8C4F5AA218D2C92700104AB0 /* login_login.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A8A18D2C92700104AB0 /* login_login.png */; };
+		8C4F5AA318D2C92700104AB0 /* login_login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A8B18D2C92700104AB0 /* login_login@2x.png */; };
+		8C4F5AA818D2C92700104AB0 /* valetpay_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A9018D2C92700104AB0 /* valetpay_logo.png */; };
+		8C4F5AA918D2C92700104AB0 /* valetpay_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A9118D2C92700104AB0 /* valetpay_logo@2x.png */; };
+		8C4F5AAA18D2C92700104AB0 /* valet_pay_settings_last.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A9318D2C92700104AB0 /* valet_pay_settings_last.png */; };
+		8C4F5AAB18D2C92700104AB0 /* valet_pay_settings_last@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A9418D2C92700104AB0 /* valet_pay_settings_last@2x.png */; };
+		8C4F5AAC18D2C92700104AB0 /* valet_pay_settings_off_duty.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A9518D2C92700104AB0 /* valet_pay_settings_off_duty.png */; };
+		8C4F5AAD18D2C92700104AB0 /* valet_pay_settings_off_duty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A9618D2C92700104AB0 /* valet_pay_settings_off_duty@2x.png */; };
+		8C4F5AAE18D2C92700104AB0 /* valet_pay_settings_on_duty.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A9718D2C92700104AB0 /* valet_pay_settings_on_duty.png */; };
+		8C4F5AAF18D2C92700104AB0 /* valet_pay_settings_on_duty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A9818D2C92700104AB0 /* valet_pay_settings_on_duty@2x.png */; };
+		8C4F5AB018D2C92700104AB0 /* valet_pay_settings_recent.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A9918D2C92700104AB0 /* valet_pay_settings_recent.png */; };
+		8C4F5AB118D2C92700104AB0 /* valet_pay_settings_recent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A9A18D2C92700104AB0 /* valet_pay_settings_recent@2x.png */; };
+		8C4F5AB218D2C92700104AB0 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A9C18D2C92700104AB0 /* splash.png */; };
+		8C4F5AB318D2C92700104AB0 /* splash_ip4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A9D18D2C92700104AB0 /* splash_ip4@2x.png */; };
+		8C4F5AB418D2C92700104AB0 /* splash_ip5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A9E18D2C92700104AB0 /* splash_ip5@2x.png */; };
+		8C8126381900E9E9007503CE /* login_password.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C8126291900E9E9007503CE /* login_password.png */; };
+		8C8126391900E9E9007503CE /* login_password@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C81262A1900E9E9007503CE /* login_password@2x.png */; };
+		8C81263A1900E9E9007503CE /* login_username.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C81262B1900E9E9007503CE /* login_username.png */; };
+		8C81263B1900E9E9007503CE /* login_username@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C81262C1900E9E9007503CE /* login_username@2x.png */; };
+		8C81263C1900E9E9007503CE /* nav_recent.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C81262D1900E9E9007503CE /* nav_recent.png */; };
+		8C81263D1900E9E9007503CE /* nav_recent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C81262E1900E9E9007503CE /* nav_recent@2x.png */; };
+		8C81263E1900E9E9007503CE /* recent_clock_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C81262F1900E9E9007503CE /* recent_clock_icon.png */; };
+		8C81263F1900E9E9007503CE /* recent_clock_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C8126301900E9E9007503CE /* recent_clock_icon@2x.png */; };
+		8C8126401900E9E9007503CE /* recent_image_frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C8126311900E9E9007503CE /* recent_image_frame.png */; };
+		8C8126411900E9E9007503CE /* recent_image_frame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C8126321900E9E9007503CE /* recent_image_frame@2x.png */; };
+		8C8126421900E9E9007503CE /* recent_key_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C8126331900E9E9007503CE /* recent_key_icon.png */; };
+		8C8126431900E9E9007503CE /* recent_key_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C8126341900E9E9007503CE /* recent_key_icon@2x.png */; };
+		8C8126441900E9E9007503CE /* recent_star_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C8126351900E9E9007503CE /* recent_star_icon.png */; };
+		8C8126451900E9E9007503CE /* recent_star_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C8126361900E9E9007503CE /* recent_star_icon@2x.png */; };
+		8C8126461900E9E9007503CE /* Valet Sign up App pg 2 -2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8C8126371900E9E9007503CE /* Valet Sign up App pg 2 -2.jpg */; };
+		8C8126481900ECF1007503CE /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C8126471900ECF1007503CE /* black.png */; };
+		8C81264A1901030E007503CE /* nav_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C8126491901030E007503CE /* nav_list.png */; };
+		8CB8037A19078A17001EECCD /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8035919078A17001EECCD /* Icon-72.png */; };
+		8CB8037B19078A17001EECCD /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8035A19078A17001EECCD /* Icon-72@2x.png */; };
+		8CB8037C19078A17001EECCD /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8035B19078A17001EECCD /* Icon-Small-50.png */; };
+		8CB8037D19078A17001EECCD /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8035C19078A17001EECCD /* Icon-Small-50@2x.png */; };
+		8CB8037E19078A17001EECCD /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8035D19078A17001EECCD /* Icon-Small.png */; };
+		8CB8037F19078A17001EECCD /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8035E19078A17001EECCD /* Icon-Small@2x.png */; };
+		8CB8038019078A17001EECCD /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8035F19078A17001EECCD /* Icon.png */; };
+		8CB8038119078A17001EECCD /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8036019078A17001EECCD /* Icon@2x.png */; };
+		8CB8038219078A17001EECCD /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8036119078A17001EECCD /* iTunesArtwork.png */; };
+		8CB8038319078A17001EECCD /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8036219078A17001EECCD /* iTunesArtwork@2x.png */; };
+		8CB8038419078A17001EECCD /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8036419078A17001EECCD /* Icon-40.png */; };
+		8CB8038519078A17001EECCD /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8036519078A17001EECCD /* Icon-40@2x.png */; };
+		8CB8038619078A17001EECCD /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8036619078A17001EECCD /* Icon-60.png */; };
+		8CB8038719078A17001EECCD /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8036719078A17001EECCD /* Icon-60@2x.png */; };
+		8CB8038819078A17001EECCD /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8036819078A17001EECCD /* Icon-72.png */; };
+		8CB8038919078A17001EECCD /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8036919078A17001EECCD /* Icon-72@2x.png */; };
+		8CB8038A19078A17001EECCD /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8036A19078A17001EECCD /* Icon-76.png */; };
+		8CB8038B19078A17001EECCD /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8036B19078A17001EECCD /* Icon-76@2x.png */; };
+		8CB8038C19078A17001EECCD /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8036C19078A17001EECCD /* Icon-Small-50.png */; };
+		8CB8038D19078A17001EECCD /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8036D19078A17001EECCD /* Icon-Small-50@2x.png */; };
+		8CB8038E19078A17001EECCD /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8036E19078A17001EECCD /* Icon-Small.png */; };
+		8CB8038F19078A17001EECCD /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8036F19078A17001EECCD /* Icon-Small@2x.png */; };
+		8CB8039019078A17001EECCD /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8037019078A17001EECCD /* Icon.png */; };
+		8CB8039119078A17001EECCD /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8037119078A17001EECCD /* Icon@2x.png */; };
+		8CB8039219078A17001EECCD /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8037219078A17001EECCD /* iTunesArtwork.png */; };
+		8CB8039319078A17001EECCD /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8037319078A17001EECCD /* iTunesArtwork@2x.png */; };
+		8CBC0B5D1904E42D00BF776A /* Tablereload.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBC0B5C1904E42D00BF776A /* Tablereload.m */; };
+		8CBDE50018FE973E007D3B96 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBDE4F718FE973E007D3B96 /* MenuViewController.m */; };
+		8CBDE50118FE973E007D3B96 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CBDE4F818FE973E007D3B96 /* MenuViewController.xib */; };
+		8CBDE50218FE973E007D3B96 /* MFSideMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBDE4FB18FE973E007D3B96 /* MFSideMenuContainerViewController.m */; };
+		8CBDE50318FE973E007D3B96 /* MFSideMenuShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBDE4FD18FE973E007D3B96 /* MFSideMenuShadow.m */; };
+		8CBDE50418FE973E007D3B96 /* UIViewController+MFSideMenuAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBDE4FF18FE973E007D3B96 /* UIViewController+MFSideMenuAdditions.m */; };
+		8CBDE50818FE9B9F007D3B96 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBDE50618FE9B9F007D3B96 /* LoginViewController.m */; };
+		8CBDE50918FE9B9F007D3B96 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CBDE50718FE9B9F007D3B96 /* LoginViewController.xib */; };
+		8CBDE50D18FE9C7C007D3B96 /* RecentPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBDE50B18FE9C7C007D3B96 /* RecentPaymentViewController.m */; };
+		8CBDE50E18FE9C7C007D3B96 /* RecentPaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CBDE50C18FE9C7C007D3B96 /* RecentPaymentViewController.xib */; };
+		8CC1FFEE19137B3E00BA8BBA /* valet_pay_All.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC1FFED19137B3E00BA8BBA /* valet_pay_All.png */; };
+		8CC585DA192AF8E10013BE0B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8CC585D9192AF8E10013BE0B /* Settings.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8C4F5A7318D2C2EF00104AB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C4F5A4518D2C2EF00104AB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C4F5A4C18D2C2EF00104AB0;
+			remoteInfo = ValetAttendant;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8C19A14A190E067F00C4EDD0 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		8C19A14B190E067F00C4EDD0 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		8C4F5A4D18D2C2EF00104AB0 /* ValetAttendant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValetAttendant.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C4F5A5018D2C2EF00104AB0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8C4F5A5218D2C2EF00104AB0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8C4F5A5418D2C2EF00104AB0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8C4F5A5818D2C2EF00104AB0 /* ValetAttendant-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ValetAttendant-Info.plist"; sourceTree = "<group>"; };
+		8C4F5A5A18D2C2EF00104AB0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8C4F5A5C18D2C2EF00104AB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8C4F5A5E18D2C2EF00104AB0 /* ValetAttendant-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ValetAttendant-Prefix.pch"; sourceTree = "<group>"; };
+		8C4F5A5F18D2C2EF00104AB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8C4F5A6018D2C2EF00104AB0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8C4F5A6318D2C2EF00104AB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8C4F5A6518D2C2EF00104AB0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8C4F5A6618D2C2EF00104AB0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8C4F5A6818D2C2EF00104AB0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8C4F5A6E18D2C2EF00104AB0 /* ValetAttendantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValetAttendantTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C4F5A6F18D2C2EF00104AB0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		8C4F5A7718D2C2EF00104AB0 /* ValetAttendantTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ValetAttendantTests-Info.plist"; sourceTree = "<group>"; };
+		8C4F5A7918D2C2EF00104AB0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8C4F5A7B18D2C2EF00104AB0 /* ValetAttendantTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ValetAttendantTests.m; sourceTree = "<group>"; };
+		8C4F5A8618D2C92700104AB0 /* common_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_bg.png; sourceTree = "<group>"; };
+		8C4F5A8718D2C92700104AB0 /* common_bg_iph4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_bg_iph4@2x.png"; sourceTree = "<group>"; };
+		8C4F5A8818D2C92700104AB0 /* common_bg_iph5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_bg_iph5@2x.png"; sourceTree = "<group>"; };
+		8C4F5A8A18D2C92700104AB0 /* login_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_login.png; sourceTree = "<group>"; };
+		8C4F5A8B18D2C92700104AB0 /* login_login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_login@2x.png"; sourceTree = "<group>"; };
+		8C4F5A9018D2C92700104AB0 /* valetpay_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = valetpay_logo.png; sourceTree = "<group>"; };
+		8C4F5A9118D2C92700104AB0 /* valetpay_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "valetpay_logo@2x.png"; sourceTree = "<group>"; };
+		8C4F5A9318D2C92700104AB0 /* valet_pay_settings_last.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = valet_pay_settings_last.png; sourceTree = "<group>"; };
+		8C4F5A9418D2C92700104AB0 /* valet_pay_settings_last@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "valet_pay_settings_last@2x.png"; sourceTree = "<group>"; };
+		8C4F5A9518D2C92700104AB0 /* valet_pay_settings_off_duty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = valet_pay_settings_off_duty.png; sourceTree = "<group>"; };
+		8C4F5A9618D2C92700104AB0 /* valet_pay_settings_off_duty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "valet_pay_settings_off_duty@2x.png"; sourceTree = "<group>"; };
+		8C4F5A9718D2C92700104AB0 /* valet_pay_settings_on_duty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = valet_pay_settings_on_duty.png; sourceTree = "<group>"; };
+		8C4F5A9818D2C92700104AB0 /* valet_pay_settings_on_duty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "valet_pay_settings_on_duty@2x.png"; sourceTree = "<group>"; };
+		8C4F5A9918D2C92700104AB0 /* valet_pay_settings_recent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = valet_pay_settings_recent.png; sourceTree = "<group>"; };
+		8C4F5A9A18D2C92700104AB0 /* valet_pay_settings_recent@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "valet_pay_settings_recent@2x.png"; sourceTree = "<group>"; };
+		8C4F5A9C18D2C92700104AB0 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		8C4F5A9D18D2C92700104AB0 /* splash_ip4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash_ip4@2x.png"; sourceTree = "<group>"; };
+		8C4F5A9E18D2C92700104AB0 /* splash_ip5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash_ip5@2x.png"; sourceTree = "<group>"; };
+		8C8126291900E9E9007503CE /* login_password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_password.png; sourceTree = "<group>"; };
+		8C81262A1900E9E9007503CE /* login_password@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_password@2x.png"; sourceTree = "<group>"; };
+		8C81262B1900E9E9007503CE /* login_username.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_username.png; sourceTree = "<group>"; };
+		8C81262C1900E9E9007503CE /* login_username@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_username@2x.png"; sourceTree = "<group>"; };
+		8C81262D1900E9E9007503CE /* nav_recent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_recent.png; sourceTree = "<group>"; };
+		8C81262E1900E9E9007503CE /* nav_recent@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_recent@2x.png"; sourceTree = "<group>"; };
+		8C81262F1900E9E9007503CE /* recent_clock_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recent_clock_icon.png; sourceTree = "<group>"; };
+		8C8126301900E9E9007503CE /* recent_clock_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recent_clock_icon@2x.png"; sourceTree = "<group>"; };
+		8C8126311900E9E9007503CE /* recent_image_frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recent_image_frame.png; sourceTree = "<group>"; };
+		8C8126321900E9E9007503CE /* recent_image_frame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recent_image_frame@2x.png"; sourceTree = "<group>"; };
+		8C8126331900E9E9007503CE /* recent_key_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recent_key_icon.png; sourceTree = "<group>"; };
+		8C8126341900E9E9007503CE /* recent_key_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recent_key_icon@2x.png"; sourceTree = "<group>"; };
+		8C8126351900E9E9007503CE /* recent_star_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recent_star_icon.png; sourceTree = "<group>"; };
+		8C8126361900E9E9007503CE /* recent_star_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recent_star_icon@2x.png"; sourceTree = "<group>"; };
+		8C8126371900E9E9007503CE /* Valet Sign up App pg 2 -2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Valet Sign up App pg 2 -2.jpg"; sourceTree = "<group>"; };
+		8C8126471900ECF1007503CE /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black.png; sourceTree = "<group>"; };
+		8C8126491901030E007503CE /* nav_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_list.png; sourceTree = "<group>"; };
+		8CB8035919078A17001EECCD /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		8CB8035A19078A17001EECCD /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		8CB8035B19078A17001EECCD /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		8CB8035C19078A17001EECCD /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		8CB8035D19078A17001EECCD /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		8CB8035E19078A17001EECCD /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		8CB8035F19078A17001EECCD /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		8CB8036019078A17001EECCD /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		8CB8036119078A17001EECCD /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		8CB8036219078A17001EECCD /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		8CB8036419078A17001EECCD /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
+		8CB8036519078A17001EECCD /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		8CB8036619078A17001EECCD /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
+		8CB8036719078A17001EECCD /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		8CB8036819078A17001EECCD /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		8CB8036919078A17001EECCD /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		8CB8036A19078A17001EECCD /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		8CB8036B19078A17001EECCD /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		8CB8036C19078A17001EECCD /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		8CB8036D19078A17001EECCD /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		8CB8036E19078A17001EECCD /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		8CB8036F19078A17001EECCD /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		8CB8037019078A17001EECCD /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		8CB8037119078A17001EECCD /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		8CB8037219078A17001EECCD /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		8CB8037319078A17001EECCD /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		8CBC0B5B1904E42D00BF776A /* Tablereload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tablereload.h; sourceTree = "<group>"; };
+		8CBC0B5C1904E42D00BF776A /* Tablereload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tablereload.m; sourceTree = "<group>"; };
+		8CBDE4F618FE973E007D3B96 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		8CBDE4F718FE973E007D3B96 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		8CBDE4F818FE973E007D3B96 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		8CBDE4F918FE973E007D3B96 /* MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenu.h; sourceTree = "<group>"; };
+		8CBDE4FA18FE973E007D3B96 /* MFSideMenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenuContainerViewController.h; sourceTree = "<group>"; };
+		8CBDE4FB18FE973E007D3B96 /* MFSideMenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenuContainerViewController.m; sourceTree = "<group>"; };
+		8CBDE4FC18FE973E007D3B96 /* MFSideMenuShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenuShadow.h; sourceTree = "<group>"; };
+		8CBDE4FD18FE973E007D3B96 /* MFSideMenuShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenuShadow.m; sourceTree = "<group>"; };
+		8CBDE4FE18FE973E007D3B96 /* UIViewController+MFSideMenuAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MFSideMenuAdditions.h"; sourceTree = "<group>"; };
+		8CBDE4FF18FE973E007D3B96 /* UIViewController+MFSideMenuAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MFSideMenuAdditions.m"; sourceTree = "<group>"; };
+		8CBDE50518FE9B9F007D3B96 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		8CBDE50618FE9B9F007D3B96 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		8CBDE50718FE9B9F007D3B96 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		8CBDE50A18FE9C7C007D3B96 /* RecentPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentPaymentViewController.h; sourceTree = "<group>"; };
+		8CBDE50B18FE9C7C007D3B96 /* RecentPaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentPaymentViewController.m; sourceTree = "<group>"; };
+		8CBDE50C18FE9C7C007D3B96 /* RecentPaymentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecentPaymentViewController.xib; sourceTree = "<group>"; };
+		8CC1FFED19137B3E00BA8BBA /* valet_pay_All.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = valet_pay_All.png; sourceTree = "<group>"; };
+		8CC585D9192AF8E10013BE0B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C4F5A4A18D2C2EF00104AB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C4F5A5318D2C2EF00104AB0 /* CoreGraphics.framework in Frameworks */,
+				8C4F5A5518D2C2EF00104AB0 /* UIKit.framework in Frameworks */,
+				8C4F5A5118D2C2EF00104AB0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C4F5A6B18D2C2EF00104AB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C4F5A7018D2C2EF00104AB0 /* XCTest.framework in Frameworks */,
+				8C4F5A7218D2C2EF00104AB0 /* UIKit.framework in Frameworks */,
+				8C4F5A7118D2C2EF00104AB0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8C19A149190E067F00C4EDD0 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				8C19A14A190E067F00C4EDD0 /* Reachability.h */,
+				8C19A14B190E067F00C4EDD0 /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		8C4F5A4418D2C2EF00104AB0 = {
+			isa = PBXGroup;
+			children = (
+				8CC585D9192AF8E10013BE0B /* Settings.bundle */,
+				8CC1FFED19137B3E00BA8BBA /* valet_pay_All.png */,
+				8C19A149190E067F00C4EDD0 /* Reachability */,
+				8CBC0B5B1904E42D00BF776A /* Tablereload.h */,
+				8CBC0B5C1904E42D00BF776A /* Tablereload.m */,
+				8CBDE50A18FE9C7C007D3B96 /* RecentPaymentViewController.h */,
+				8CBDE50B18FE9C7C007D3B96 /* RecentPaymentViewController.m */,
+				8CBDE50C18FE9C7C007D3B96 /* RecentPaymentViewController.xib */,
+				8CBDE50518FE9B9F007D3B96 /* LoginViewController.h */,
+				8CBDE50618FE9B9F007D3B96 /* LoginViewController.m */,
+				8CBDE50718FE9B9F007D3B96 /* LoginViewController.xib */,
+				8CBDE4F518FE973E007D3B96 /* MFSideMenu */,
+				8C4F5A5618D2C2EF00104AB0 /* ValetAttendant */,
+				8C4F5A7518D2C2EF00104AB0 /* ValetAttendantTests */,
+				8C4F5A4F18D2C2EF00104AB0 /* Frameworks */,
+				8C4F5A4E18D2C2EF00104AB0 /* Products */,
+			);
+			sourceTree = "<group>";
+			usesTabs = 0;
+		};
+		8C4F5A4E18D2C2EF00104AB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C4F5A4D18D2C2EF00104AB0 /* ValetAttendant.app */,
+				8C4F5A6E18D2C2EF00104AB0 /* ValetAttendantTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C4F5A4F18D2C2EF00104AB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C4F5A5018D2C2EF00104AB0 /* Foundation.framework */,
+				8C4F5A5218D2C2EF00104AB0 /* CoreGraphics.framework */,
+				8C4F5A5418D2C2EF00104AB0 /* UIKit.framework */,
+				8C4F5A6F18D2C2EF00104AB0 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C4F5A5618D2C2EF00104AB0 /* ValetAttendant */ = {
+			isa = PBXGroup;
+			children = (
+				8C8126271900E98B007503CE /* imag */,
+				8C4F5A5F18D2C2EF00104AB0 /* AppDelegate.h */,
+				8C4F5A6018D2C2EF00104AB0 /* AppDelegate.m */,
+				8C4F5A6218D2C2EF00104AB0 /* Main.storyboard */,
+				8C4F5A6518D2C2EF00104AB0 /* ViewController.h */,
+				8C4F5A6618D2C2EF00104AB0 /* ViewController.m */,
+				8C4F5A6818D2C2EF00104AB0 /* Images.xcassets */,
+				8C4F5A5718D2C2EF00104AB0 /* Supporting Files */,
+			);
+			path = ValetAttendant;
+			sourceTree = "<group>";
+		};
+		8C4F5A5718D2C2EF00104AB0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C4F5A5818D2C2EF00104AB0 /* ValetAttendant-Info.plist */,
+				8C4F5A5918D2C2EF00104AB0 /* InfoPlist.strings */,
+				8C4F5A5C18D2C2EF00104AB0 /* main.m */,
+				8C4F5A5E18D2C2EF00104AB0 /* ValetAttendant-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8C4F5A7518D2C2EF00104AB0 /* ValetAttendantTests */ = {
+			isa = PBXGroup;
+			children = (
+				8C4F5A7B18D2C2EF00104AB0 /* ValetAttendantTests.m */,
+				8C4F5A7618D2C2EF00104AB0 /* Supporting Files */,
+			);
+			path = ValetAttendantTests;
+			sourceTree = "<group>";
+		};
+		8C4F5A7618D2C2EF00104AB0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C4F5A7718D2C2EF00104AB0 /* ValetAttendantTests-Info.plist */,
+				8C4F5A7818D2C2EF00104AB0 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8C4F5A8518D2C92700104AB0 /* Common BG */ = {
+			isa = PBXGroup;
+			children = (
+				8C4F5A8618D2C92700104AB0 /* common_bg.png */,
+				8C4F5A8718D2C92700104AB0 /* common_bg_iph4@2x.png */,
+				8C4F5A8818D2C92700104AB0 /* common_bg_iph5@2x.png */,
+			);
+			name = "Common BG";
+			path = "../Common BG";
+			sourceTree = "<group>";
+		};
+		8C4F5A8918D2C92700104AB0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8C4F5A8A18D2C92700104AB0 /* login_login.png */,
+				8C4F5A8B18D2C92700104AB0 /* login_login@2x.png */,
+				8C4F5A9018D2C92700104AB0 /* valetpay_logo.png */,
+				8C4F5A9118D2C92700104AB0 /* valetpay_logo@2x.png */,
+			);
+			name = Login;
+			path = ../Login;
+			sourceTree = "<group>";
+		};
+		8C4F5A9218D2C92700104AB0 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				8C4F5A9318D2C92700104AB0 /* valet_pay_settings_last.png */,
+				8C4F5A9418D2C92700104AB0 /* valet_pay_settings_last@2x.png */,
+				8C4F5A9518D2C92700104AB0 /* valet_pay_settings_off_duty.png */,
+				8C4F5A9618D2C92700104AB0 /* valet_pay_settings_off_duty@2x.png */,
+				8C4F5A9718D2C92700104AB0 /* valet_pay_settings_on_duty.png */,
+				8C4F5A9818D2C92700104AB0 /* valet_pay_settings_on_duty@2x.png */,
+				8C4F5A9918D2C92700104AB0 /* valet_pay_settings_recent.png */,
+				8C4F5A9A18D2C92700104AB0 /* valet_pay_settings_recent@2x.png */,
+			);
+			name = Settings;
+			path = ../Settings;
+			sourceTree = "<group>";
+		};
+		8C4F5A9B18D2C92700104AB0 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				8C4F5A9C18D2C92700104AB0 /* splash.png */,
+				8C4F5A9D18D2C92700104AB0 /* splash_ip4@2x.png */,
+				8C4F5A9E18D2C92700104AB0 /* splash_ip5@2x.png */,
+			);
+			name = Splash;
+			path = ../Splash;
+			sourceTree = "<group>";
+		};
+		8C8126271900E98B007503CE /* imag */ = {
+			isa = PBXGroup;
+			children = (
+				8CB8034B19078A17001EECCD /* attendant-app-icon */,
+				8C8126281900E98B007503CE /* recpay */,
+				8C4F5A8518D2C92700104AB0 /* Common BG */,
+				8C4F5A8918D2C92700104AB0 /* Login */,
+				8C4F5A9218D2C92700104AB0 /* Settings */,
+				8C4F5A9B18D2C92700104AB0 /* Splash */,
+			);
+			name = imag;
+			path = ../imag;
+			sourceTree = "<group>";
+		};
+		8C8126281900E98B007503CE /* recpay */ = {
+			isa = PBXGroup;
+			children = (
+				8C8126471900ECF1007503CE /* black.png */,
+				8C8126291900E9E9007503CE /* login_password.png */,
+				8C81262A1900E9E9007503CE /* login_password@2x.png */,
+				8C81262B1900E9E9007503CE /* login_username.png */,
+				8C81262C1900E9E9007503CE /* login_username@2x.png */,
+				8C81262D1900E9E9007503CE /* nav_recent.png */,
+				8C81262E1900E9E9007503CE /* nav_recent@2x.png */,
+				8C8126491901030E007503CE /* nav_list.png */,
+				8C81262F1900E9E9007503CE /* recent_clock_icon.png */,
+				8C8126301900E9E9007503CE /* recent_clock_icon@2x.png */,
+				8C8126311900E9E9007503CE /* recent_image_frame.png */,
+				8C8126321900E9E9007503CE /* recent_image_frame@2x.png */,
+				8C8126331900E9E9007503CE /* recent_key_icon.png */,
+				8C8126341900E9E9007503CE /* recent_key_icon@2x.png */,
+				8C8126351900E9E9007503CE /* recent_star_icon.png */,
+				8C8126361900E9E9007503CE /* recent_star_icon@2x.png */,
+				8C8126371900E9E9007503CE /* Valet Sign up App pg 2 -2.jpg */,
+			);
+			name = recpay;
+			path = ../recpay;
+			sourceTree = "<group>";
+		};
+		8CB8034B19078A17001EECCD /* attendant-app-icon */ = {
+			isa = PBXGroup;
+			children = (
+				8CB8035819078A17001EECCD /* ios */,
+				8CB8036319078A17001EECCD /* ios7 */,
+			);
+			name = "attendant-app-icon";
+			path = "../attendant-app-icon";
+			sourceTree = "<group>";
+		};
+		8CB8035819078A17001EECCD /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				8CB8035919078A17001EECCD /* Icon-72.png */,
+				8CB8035A19078A17001EECCD /* Icon-72@2x.png */,
+				8CB8035B19078A17001EECCD /* Icon-Small-50.png */,
+				8CB8035C19078A17001EECCD /* Icon-Small-50@2x.png */,
+				8CB8035D19078A17001EECCD /* Icon-Small.png */,
+				8CB8035E19078A17001EECCD /* Icon-Small@2x.png */,
+				8CB8035F19078A17001EECCD /* Icon.png */,
+				8CB8036019078A17001EECCD /* Icon@2x.png */,
+				8CB8036119078A17001EECCD /* iTunesArtwork.png */,
+				8CB8036219078A17001EECCD /* iTunesArtwork@2x.png */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		8CB8036319078A17001EECCD /* ios7 */ = {
+			isa = PBXGroup;
+			children = (
+				8CB8036419078A17001EECCD /* Icon-40.png */,
+				8CB8036519078A17001EECCD /* Icon-40@2x.png */,
+				8CB8036619078A17001EECCD /* Icon-60.png */,
+				8CB8036719078A17001EECCD /* Icon-60@2x.png */,
+				8CB8036819078A17001EECCD /* Icon-72.png */,
+				8CB8036919078A17001EECCD /* Icon-72@2x.png */,
+				8CB8036A19078A17001EECCD /* Icon-76.png */,
+				8CB8036B19078A17001EECCD /* Icon-76@2x.png */,
+				8CB8036C19078A17001EECCD /* Icon-Small-50.png */,
+				8CB8036D19078A17001EECCD /* Icon-Small-50@2x.png */,
+				8CB8036E19078A17001EECCD /* Icon-Small.png */,
+				8CB8036F19078A17001EECCD /* Icon-Small@2x.png */,
+				8CB8037019078A17001EECCD /* Icon.png */,
+				8CB8037119078A17001EECCD /* Icon@2x.png */,
+				8CB8037219078A17001EECCD /* iTunesArtwork.png */,
+				8CB8037319078A17001EECCD /* iTunesArtwork@2x.png */,
+			);
+			path = ios7;
+			sourceTree = "<group>";
+		};
+		8CBDE4F518FE973E007D3B96 /* MFSideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				8CBDE4F618FE973E007D3B96 /* MenuViewController.h */,
+				8CBDE4F718FE973E007D3B96 /* MenuViewController.m */,
+				8CBDE4F818FE973E007D3B96 /* MenuViewController.xib */,
+				8CBDE4F918FE973E007D3B96 /* MFSideMenu.h */,
+				8CBDE4FA18FE973E007D3B96 /* MFSideMenuContainerViewController.h */,
+				8CBDE4FB18FE973E007D3B96 /* MFSideMenuContainerViewController.m */,
+				8CBDE4FC18FE973E007D3B96 /* MFSideMenuShadow.h */,
+				8CBDE4FD18FE973E007D3B96 /* MFSideMenuShadow.m */,
+				8CBDE4FE18FE973E007D3B96 /* UIViewController+MFSideMenuAdditions.h */,
+				8CBDE4FF18FE973E007D3B96 /* UIViewController+MFSideMenuAdditions.m */,
+			);
+			path = MFSideMenu;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8C4F5A4C18D2C2EF00104AB0 /* ValetAttendant */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C4F5A7F18D2C2EF00104AB0 /* Build configuration list for PBXNativeTarget "ValetAttendant" */;
+			buildPhases = (
+				8C4F5A4918D2C2EF00104AB0 /* Sources */,
+				8C4F5A4A18D2C2EF00104AB0 /* Frameworks */,
+				8C4F5A4B18D2C2EF00104AB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ValetAttendant;
+			productName = ValetAttendant;
+			productReference = 8C4F5A4D18D2C2EF00104AB0 /* ValetAttendant.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8C4F5A6D18D2C2EF00104AB0 /* ValetAttendantTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C4F5A8218D2C2EF00104AB0 /* Build configuration list for PBXNativeTarget "ValetAttendantTests" */;
+			buildPhases = (
+				8C4F5A6A18D2C2EF00104AB0 /* Sources */,
+				8C4F5A6B18D2C2EF00104AB0 /* Frameworks */,
+				8C4F5A6C18D2C2EF00104AB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C4F5A7418D2C2EF00104AB0 /* PBXTargetDependency */,
+			);
+			name = ValetAttendantTests;
+			productName = ValetAttendantTests;
+			productReference = 8C4F5A6E18D2C2EF00104AB0 /* ValetAttendantTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8C4F5A4518D2C2EF00104AB0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = techbasics;
+				TargetAttributes = {
+					8C4F5A4C18D2C2EF00104AB0 = {
+						DevelopmentTeam = Z9YZS48247;
+					};
+					8C4F5A6D18D2C2EF00104AB0 = {
+						TestTargetID = 8C4F5A4C18D2C2EF00104AB0;
+					};
+				};
+			};
+			buildConfigurationList = 8C4F5A4818D2C2EF00104AB0 /* Build configuration list for PBXProject "ValetAttendant" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8C4F5A4418D2C2EF00104AB0;
+			productRefGroup = 8C4F5A4E18D2C2EF00104AB0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C4F5A4C18D2C2EF00104AB0 /* ValetAttendant */,
+				8C4F5A6D18D2C2EF00104AB0 /* ValetAttendantTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C4F5A4B18D2C2EF00104AB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CB8038019078A17001EECCD /* Icon.png in Resources */,
+				8C8126461900E9E9007503CE /* Valet Sign up App pg 2 -2.jpg in Resources */,
+				8C81263A1900E9E9007503CE /* login_username.png in Resources */,
+				8CB8038B19078A17001EECCD /* Icon-76@2x.png in Resources */,
+				8C4F5AA318D2C92700104AB0 /* login_login@2x.png in Resources */,
+				8C4F5AA918D2C92700104AB0 /* valetpay_logo@2x.png in Resources */,
+				8CB8039219078A17001EECCD /* iTunesArtwork.png in Resources */,
+				8C4F5AA118D2C92700104AB0 /* common_bg_iph5@2x.png in Resources */,
+				8C8126451900E9E9007503CE /* recent_star_icon@2x.png in Resources */,
+				8C4F5AAB18D2C92700104AB0 /* valet_pay_settings_last@2x.png in Resources */,
+				8C4F5A6918D2C2EF00104AB0 /* Images.xcassets in Resources */,
+				8C4F5AB318D2C92700104AB0 /* splash_ip4@2x.png in Resources */,
+				8CB8039019078A17001EECCD /* Icon.png in Resources */,
+				8C8126481900ECF1007503CE /* black.png in Resources */,
+				8C8126411900E9E9007503CE /* recent_image_frame@2x.png in Resources */,
+				8CB8038319078A17001EECCD /* iTunesArtwork@2x.png in Resources */,
+				8C4F5AB018D2C92700104AB0 /* valet_pay_settings_recent.png in Resources */,
+				8CC1FFEE19137B3E00BA8BBA /* valet_pay_All.png in Resources */,
+				8C4F5AAE18D2C92700104AB0 /* valet_pay_settings_on_duty.png in Resources */,
+				8CB8039319078A17001EECCD /* iTunesArtwork@2x.png in Resources */,
+				8C81263E1900E9E9007503CE /* recent_clock_icon.png in Resources */,
+				8CB8037F19078A17001EECCD /* Icon-Small@2x.png in Resources */,
+				8CB8038819078A17001EECCD /* Icon-72.png in Resources */,
+				8CB8037E19078A17001EECCD /* Icon-Small.png in Resources */,
+				8C8126431900E9E9007503CE /* recent_key_icon@2x.png in Resources */,
+				8CB8037C19078A17001EECCD /* Icon-Small-50.png in Resources */,
+				8C81263B1900E9E9007503CE /* login_username@2x.png in Resources */,
+				8C4F5A9F18D2C92700104AB0 /* common_bg.png in Resources */,
+				8C81263F1900E9E9007503CE /* recent_clock_icon@2x.png in Resources */,
+				8CB8037B19078A17001EECCD /* Icon-72@2x.png in Resources */,
+				8C4F5AAF18D2C92700104AB0 /* valet_pay_settings_on_duty@2x.png in Resources */,
+				8C4F5AA818D2C92700104AB0 /* valetpay_logo.png in Resources */,
+				8CB8038719078A17001EECCD /* Icon-60@2x.png in Resources */,
+				8CB8038D19078A17001EECCD /* Icon-Small-50@2x.png in Resources */,
+				8C4F5AAD18D2C92700104AB0 /* valet_pay_settings_off_duty@2x.png in Resources */,
+				8CB8038A19078A17001EECCD /* Icon-76.png in Resources */,
+				8CB8038F19078A17001EECCD /* Icon-Small@2x.png in Resources */,
+				8C4F5A5B18D2C2EF00104AB0 /* InfoPlist.strings in Resources */,
+				8C8126421900E9E9007503CE /* recent_key_icon.png in Resources */,
+				8CBDE50118FE973E007D3B96 /* MenuViewController.xib in Resources */,
+				8C4F5AA218D2C92700104AB0 /* login_login.png in Resources */,
+				8CB8037A19078A17001EECCD /* Icon-72.png in Resources */,
+				8C8126381900E9E9007503CE /* login_password.png in Resources */,
+				8CBDE50918FE9B9F007D3B96 /* LoginViewController.xib in Resources */,
+				8C4F5AAA18D2C92700104AB0 /* valet_pay_settings_last.png in Resources */,
+				8CB8038E19078A17001EECCD /* Icon-Small.png in Resources */,
+				8CB8038219078A17001EECCD /* iTunesArtwork.png in Resources */,
+				8C4F5AAC18D2C92700104AB0 /* valet_pay_settings_off_duty.png in Resources */,
+				8CB8037D19078A17001EECCD /* Icon-Small-50@2x.png in Resources */,
+				8CC585DA192AF8E10013BE0B /* Settings.bundle in Resources */,
+				8C4F5AB118D2C92700104AB0 /* valet_pay_settings_recent@2x.png in Resources */,
+				8C81263D1900E9E9007503CE /* nav_recent@2x.png in Resources */,
+				8CB8039119078A17001EECCD /* Icon@2x.png in Resources */,
+				8C8126391900E9E9007503CE /* login_password@2x.png in Resources */,
+				8CBDE50E18FE9C7C007D3B96 /* RecentPaymentViewController.xib in Resources */,
+				8C4F5AB218D2C92700104AB0 /* splash.png in Resources */,
+				8C4F5A6418D2C2EF00104AB0 /* Main.storyboard in Resources */,
+				8CB8038619078A17001EECCD /* Icon-60.png in Resources */,
+				8CB8038519078A17001EECCD /* Icon-40@2x.png in Resources */,
+				8C8126441900E9E9007503CE /* recent_star_icon.png in Resources */,
+				8CB8038C19078A17001EECCD /* Icon-Small-50.png in Resources */,
+				8CB8038119078A17001EECCD /* Icon@2x.png in Resources */,
+				8CB8038919078A17001EECCD /* Icon-72@2x.png in Resources */,
+				8CB8038419078A17001EECCD /* Icon-40.png in Resources */,
+				8C81263C1900E9E9007503CE /* nav_recent.png in Resources */,
+				8C81264A1901030E007503CE /* nav_list.png in Resources */,
+				8C4F5AB418D2C92700104AB0 /* splash_ip5@2x.png in Resources */,
+				8C8126401900E9E9007503CE /* recent_image_frame.png in Resources */,
+				8C4F5AA018D2C92700104AB0 /* common_bg_iph4@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C4F5A6C18D2C2EF00104AB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C4F5A7A18D2C2EF00104AB0 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C4F5A4918D2C2EF00104AB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CBDE50818FE9B9F007D3B96 /* LoginViewController.m in Sources */,
+				8C4F5A6718D2C2EF00104AB0 /* ViewController.m in Sources */,
+				8C4F5A6118D2C2EF00104AB0 /* AppDelegate.m in Sources */,
+				8C19A14C190E067F00C4EDD0 /* Reachability.m in Sources */,
+				8C4F5A5D18D2C2EF00104AB0 /* main.m in Sources */,
+				8CBDE50D18FE9C7C007D3B96 /* RecentPaymentViewController.m in Sources */,
+				8CBDE50018FE973E007D3B96 /* MenuViewController.m in Sources */,
+				8CBDE50318FE973E007D3B96 /* MFSideMenuShadow.m in Sources */,
+				8CBC0B5D1904E42D00BF776A /* Tablereload.m in Sources */,
+				8CBDE50218FE973E007D3B96 /* MFSideMenuContainerViewController.m in Sources */,
+				8CBDE50418FE973E007D3B96 /* UIViewController+MFSideMenuAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C4F5A6A18D2C2EF00104AB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C4F5A7C18D2C2EF00104AB0 /* ValetAttendantTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8C4F5A7418D2C2EF00104AB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C4F5A4C18D2C2EF00104AB0 /* ValetAttendant */;
+			targetProxy = 8C4F5A7318D2C2EF00104AB0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8C4F5A5918D2C2EF00104AB0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C4F5A5A18D2C2EF00104AB0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8C4F5A6218D2C2EF00104AB0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C4F5A6318D2C2EF00104AB0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8C4F5A7818D2C2EF00104AB0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C4F5A7918D2C2EF00104AB0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8C4F5A7D18D2C2EF00104AB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv7s,
+					armv7,
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Srinivas Oddati (8CMESY86V9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Srinivas Oddati (8CMESY86V9)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "C9DF5439-D15C-408C-B8A7-EC73F02827C0";
+				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 armv7s";
+			};
+			name = Debug;
+		};
+		8C4F5A7E18D2C2EF00104AB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv7s,
+					armv7,
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Srinivas Oddati (8CMESY86V9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Srinivas Oddati (8CMESY86V9)";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PROVISIONING_PROFILE = "C9DF5439-D15C-408C-B8A7-EC73F02827C0";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s";
+			};
+			name = Release;
+		};
+		8C4F5A8018D2C2EF00104AB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ValetAttendant/ValetAttendant-Prefix.pch";
+				INFOPLIST_FILE = "ValetAttendant/ValetAttendant-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "C9DF5439-D15C-408C-B8A7-EC73F02827C0";
+				VALID_ARCHS = "armv7 armv7s";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8C4F5A8118D2C2EF00104AB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ValetAttendant/ValetAttendant-Prefix.pch";
+				INFOPLIST_FILE = "ValetAttendant/ValetAttendant-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "C9DF5439-D15C-408C-B8A7-EC73F02827C0";
+				VALID_ARCHS = "armv7 armv7s";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8C4F5A8318D2C2EF00104AB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ValetAttendant.app/ValetAttendant";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ValetAttendant/ValetAttendant-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ValetAttendantTests/ValetAttendantTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8C4F5A8418D2C2EF00104AB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ValetAttendant.app/ValetAttendant";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ValetAttendant/ValetAttendant-Prefix.pch";
+				INFOPLIST_FILE = "ValetAttendantTests/ValetAttendantTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C4F5A4818D2C2EF00104AB0 /* Build configuration list for PBXProject "ValetAttendant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C4F5A7D18D2C2EF00104AB0 /* Debug */,
+				8C4F5A7E18D2C2EF00104AB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C4F5A7F18D2C2EF00104AB0 /* Build configuration list for PBXNativeTarget "ValetAttendant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C4F5A8018D2C2EF00104AB0 /* Debug */,
+				8C4F5A8118D2C2EF00104AB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C4F5A8218D2C2EF00104AB0 /* Build configuration list for PBXNativeTarget "ValetAttendantTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C4F5A8318D2C2EF00104AB0 /* Debug */,
+				8C4F5A8418D2C2EF00104AB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8C4F5A4518D2C2EF00104AB0 /* Project object */;
+}

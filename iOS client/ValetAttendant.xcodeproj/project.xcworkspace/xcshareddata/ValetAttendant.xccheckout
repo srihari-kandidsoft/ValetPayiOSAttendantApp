@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9E8F09A4-182D-43FD-84A4-32DB4DF3F4F2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ValetAttendant</string>
+	<key>IDESourceControlProjectPath</key>
+	<string>ValetAttendant.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FCE1126B-DFE4-43C6-B83A-03288C03A618</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/srihari-kandidsoft/ValetPayiOSapp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FCE1126B-DFE4-43C6-B83A-03288C03A618</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FCE1126B-DFE4-43C6-B83A-03288C03A618</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ValetAttendant</string>
+		</dict>
+	</array>
+</dict>
+</plist>
