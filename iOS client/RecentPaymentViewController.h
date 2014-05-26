@@ -19,6 +19,7 @@
     IBOutlet UILabel *address_lbl,*locationcode_lbl,*amt_lbl,*address_lbl1;
     NSIndexPath * swiped_Index;
     NSString *common;
+    IBOutlet UIActivityIndicatorView *act_view;
     
 }
 -(void)myTVReloadMethod;

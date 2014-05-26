@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecentPaymentViewController">
             <connections>
                 <outlet property="Table" destination="6Bz-0e-sPs" id="bXC-Fl-HSH"/>
+                <outlet property="act_view" destination="u1P-hP-68E" id="BBO-Qp-Uts"/>
                 <outlet property="address_lbl" destination="cEd-lD-YS4" id="Lom-95-thJ"/>
                 <outlet property="address_lbl1" destination="uCF-eF-j4E" id="VjU-oC-Iu4"/>
                 <outlet property="amt_lbl" destination="rad-Ww-kHa" id="XZt-ci-RR3"/>
@@ -94,6 +95,12 @@
                         <action selector="slideItLeft:" destination="-1" eventType="touchUpInside" id="9zk-GG-uW9"/>
                     </connections>
                 </button>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="u1P-hP-68E">
+                    <rect key="frame" x="142" y="302" width="37" height="37"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="0.46000000000000002" colorSpace="calibratedRGB"/>
+                    <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

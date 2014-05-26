@@ -17,6 +17,7 @@
 #import "RecentPaymentViewController.h"
 #import "MFSideMenuContainerViewController.h"
 #import "AppDelegate.h"
+#define UPDATION_INTERVEL @"INTERVEL"
 
 #define API_PREFIX "http://api.valetpayapp.com/demo/"
 #endif

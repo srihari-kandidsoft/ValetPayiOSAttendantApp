@@ -58,6 +58,7 @@
     }
     self.mainNavigationController.navigationBarHidden=YES;
     [self.window makeKeyAndVisible];
+    [self registerDefaultsFromSettingsBundle];
     return YES;
 }
 +(NSDictionary *)downLoadFrom:(NSString *)url parameters:(NSString *) para_str
@@ -123,7 +124,9 @@
     
     NSString *result = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     
-  //  NSLog(@"result-------%@",[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:nil]);
+    NSLog(@"result-------%@",result);
+    
+   // NSLog(@"result-------%@",[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:nil]);
     
     
     
@@ -250,11 +253,38 @@
         if(key)
         {
             [defaultsToRegister setObject:[prefSpecification objectForKey:@"DefaultValue"] forKey:key];
+            NSLog(@"writing as default %@ to the key %@",[prefSpecification objectForKey:@"DefaultValue"],key);
         }
     }
-   
-    BOOL enabled;
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultsToRegister];
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+    id LocationMe = [[NSUserDefaults standardUserDefaults] objectForKey:@"timer"];
+    NSLog(@"%@",LocationMe);
+    
+    
+    //Current user interval
+    
+    if ([LocationMe isEqualToString:@"0"]) {
+        [[NSUserDefaults standardUserDefaults] setObject:@"5" forKey:UPDATION_INTERVEL];
+    }
+    else if  ([LocationMe isEqualToString:@"1"]) {
+        [[NSUserDefaults standardUserDefaults] setObject:@"10" forKey:UPDATION_INTERVEL];
+    }
+    else  if ([LocationMe isEqualToString:@"2"]) {
+        [[NSUserDefaults standardUserDefaults] setObject:@"25" forKey:UPDATION_INTERVEL];
+    }
+    else if ([LocationMe isEqualToString:@"3"])
+    {
+        [[NSUserDefaults standardUserDefaults] setObject:@"60" forKey:UPDATION_INTERVEL];
+    }
+    else
+    {
+        [[NSUserDefaults standardUserDefaults] setObject:@"120" forKey:UPDATION_INTERVEL];
+    }
+
+    BOOL enabled;
            //demo
         enabled = [defaults boolForKey:@"enabled_preference"];
     
@@ -294,6 +324,31 @@
         
         return;
     }
+    else{
+        
+        //remove local value
+        [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"last"];
+        //set rootview controller
+        RecentPaymentViewController *recent=[[RecentPaymentViewController alloc]initWithNibName:@"RecentPaymentViewController" bundle:nil];
+        
+        self.mainNavigationController = [[UINavigationController alloc]initWithRootViewController:recent];
+        
+        MenuViewController *menuViewController = [[MenuViewController alloc] init];
+        
+        self.container = [MFSideMenuContainerViewController
+                          containerWithCenterViewController:[AppDelegate appDelegate].mainNavigationController
+                          leftMenuViewController:menuViewController
+                          rightMenuViewController:nil];
+        
+        self.mainNavigationController=[[UINavigationController alloc]initWithRootViewController:self.container];
+        
+        self.window.rootViewController = self.mainNavigationController;
+        
+        
+    }
+
+    self.mainNavigationController.navigationBarHidden=YES;
+    [self.window makeKeyAndVisible];
 
     
 }

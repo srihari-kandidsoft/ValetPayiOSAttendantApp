@@ -42,15 +42,15 @@
     // Do any additional setup after loading the view from its nib.
     
     //set the value for label
-
+       act_view.hidden=YES;
     locationcode_lbl.text=[NSString stringWithFormat:@":%@",[[NSUserDefaults standardUserDefaults]valueForKey:@"locationcode"]];
     amt_lbl.text=[NSString stringWithFormat:@"$%@",[[NSUserDefaults standardUserDefaults]valueForKey:@"amt"]];
-    address_lbl.text=[NSString stringWithFormat:@"%@ %@",[[NSUserDefaults standardUserDefaults]valueForKey:@"address"],[[NSUserDefaults standardUserDefaults]valueForKey:@"addr1"]];
-    address_lbl.lineBreakMode = NSLineBreakByWordWrapping;
-  ///  address_lbl1.text=;
+    address_lbl.text=[NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults]valueForKey:@"address"]];
+   // address_lbl.lineBreakMode = NSLineBreakByWordWrapping;
+    address_lbl1.text=[[NSUserDefaults standardUserDefaults]valueForKey:@"addr1"];
     isSet=NO;
-    address_lbl.numberOfLines = 0;
-    [address_lbl sizeToFit];
+    //address_lbl.numberOfLines = 0;
+    //[address_lbl sizeToFit];
     [self fetchRecentPayment];
     self.navigationController.navigationBarHidden=YES;
     [self setNeedsStatusBarAppearanceUpdate];
@@ -66,6 +66,14 @@
     [self setRefreshControl:refreshControl];
     
     [_Table addSubview:refreshControl];
+    
+    
+    NSTimer *timer;
+     int update_interval = [[[NSUserDefaults standardUserDefaults] objectForKey:UPDATION_INTERVEL] intValue];
+    NSLog(@"update_interval---%d",update_interval);
+    timer=[NSTimer scheduledTimerWithTimeInterval:update_interval target:self selector:@selector(fetchRecentPayment1) userInfo:nil repeats:YES];
+
+    
 }
 - (void)refresh:(id)sender {
     
@@ -150,9 +158,9 @@
         [amtfloat setFont:[UIFont fontWithName:@"Avenir-Black" size:13]];
         [cell.contentView addSubview:amtfloat];
         
-        UILabel *amtmain = [[UILabel alloc] initWithFrame:CGRectMake(220,93,50,20)];
+        UILabel *amtmain = [[UILabel alloc] initWithFrame:CGRectMake(218,93,50,20)];
         [amtmain setTag:6];
-        amtmain.textAlignment=NSTextAlignmentCenter;
+        amtmain.textAlignment=NSTextAlignmentRight;
         amtmain.textColor = [UIColor greenColor];
         [amtmain setBackgroundColor:[UIColor clearColor]];
         [amtmain setFont:[UIFont fontWithName:@"Avenir-Black" size:25]];
@@ -230,16 +238,20 @@
     //split the double value into int and float
     double num = [[[insert objectAtIndex:indexPath.row ] valueForKey:@"TotalAmount"]doubleValue];
     int intpart = (int)num;
-    double decpart = num - intpart;
-     NSLog(@"dfdfdfdf%f",decpart);
-    NSString *str=[[NSString stringWithFormat:@"%f",decpart]stringByReplacingOccurrencesOfString:@"0" withString:@""];
+    float decpart = num - intpart;
+
+    NSString *str=[NSString stringWithFormat:@"%.2f",decpart];
+    
+    NSArray *array=[str componentsSeparatedByString:@"."];
+    
+
     if (decpart==0.0000) {
         [(UILabel *)[cell.contentView viewWithTag:6] setText:[NSString stringWithFormat:@"$%d",intpart]];
 
     }
     else{
         [(UILabel *)[cell.contentView viewWithTag:6] setText:[NSString stringWithFormat:@"$%d",intpart]];
-        [(UILabel *)[cell.contentView viewWithTag:8] setText:[NSString stringWithFormat:@"%@",str]];
+        [(UILabel *)[cell.contentView viewWithTag:8] setText:[NSString stringWithFormat:@".%@",array[1]]];
     }
     
     
@@ -324,6 +336,47 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)fetchRecentPayment1
+{
+    NSLog(@"hi----%d",[insert count]);
+    
+    if (![AppDelegate isNetworkAvailable]) {
+        _Table.hidden=YES;
+        
+        [AppDelegate Reachabiltyalert];
+        return ;
+    }
+    //call the API
+    NSLog(@"dfdfdf%@",[[NSUserDefaults standardUserDefaults]valueForKey:@"last"]);
+    
+    if (![[NSUserDefaults standardUserDefaults]valueForKey:@"last"]) {
+        act_view.hidden=NO;
+        [act_view startAnimating];
+
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        __block    NSString *parameter;
+            insert =[[NSMutableArray alloc]init];
+            dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                parameter=[NSString stringWithFormat:@"valetlot_id=%@&client=mobile&Status=0",[[NSUserDefaults standardUserDefaults]valueForKey:@"lot_id"]];
+ insert= [[AppDelegate downLoadFrom:[NSString stringWithFormat:@"fetch_valet_transactions.php"] parameters:parameter]valueForKey:@"result"];
+            });
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                NSLog(@"dfdfdf%d",[insert count]);
+                [_Table reloadData];
+                [act_view stopAnimating];
+
+            });
+            
+        });
+
+
+    }
+    
+  }
+-(void)timer
+{
+   }
 -(void)fetchRecentPayment
 {
     NSLog(@"hi----%d",[insert count]);
@@ -334,21 +387,23 @@
         [AppDelegate Reachabiltyalert];
         return ;
     }
+    [self performSelector:@selector(timer) withObject:nil afterDelay:25];
+    
+    
+
     NSString *parameter;
     insert =[[NSMutableArray alloc]init];
     //call the API
-    //http://api.valetpayapp.com/demo/dashboard_fetch_valet_transactions.php?valetlot_id=valetlot_52c3e6c52dd6f&start_date=2014-01-01&end_date=2014-02-28&client=mobile
-    NSLog(@"dfdfdf%@",[[NSUserDefaults standardUserDefaults]valueForKey:@"last"]);
+       NSLog(@"dfdfdf%@",[[NSUserDefaults standardUserDefaults]valueForKey:@"last"]);
 
     if (![[NSUserDefaults standardUserDefaults]valueForKey:@"last"]) {
         
         parameter=[NSString stringWithFormat:@"valetlot_id=%@&client=mobile&Status=0",[[NSUserDefaults standardUserDefaults]valueForKey:@"lot_id"]];
-        
-    }
+           }
     else{
         parameter=[NSString stringWithFormat:@"valetlot_id=%@&client=mobile",[[NSUserDefaults standardUserDefaults]valueForKey:@"lot_id"]];
     }
-    insert= [[AppDelegate downLoadFrom:[NSString stringWithFormat:@"dashboard_fetch_valet_transactions.php"] parameters:parameter]valueForKey:@"result"];
+    insert= [[AppDelegate downLoadFrom:[NSString stringWithFormat:@"fetch_valet_transactions.php"] parameters:parameter]valueForKey:@"result"];
     NSLog(@"dfdfdf%d",[insert count]);
    
 
@@ -360,7 +415,6 @@
 -(void)fetchcheckout
 {
     
-    // NSLog(@"hi----%d",[insert count]);
     //Checking network rechability
     
     if (![AppDelegate isNetworkAvailable]) {

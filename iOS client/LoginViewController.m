@@ -37,10 +37,11 @@
         [alert show];
     }
     else{
-    NSString *parameter=[NSString stringWithFormat:@"valet_code=%@&password=%@",email_id.text,pwd.text];
+    NSString *parameter=[NSString stringWithFormat:@"valet_code=%@&password=%@&client=mobile",email_id.text,pwd.text];
     NSMutableArray *insert=[[NSMutableArray alloc]init];
     
     insert= [[AppDelegate downLoadFrom:[NSString stringWithFormat:@"authenticate_valet.php"] parameters:parameter]valueForKey:@"result"];
+        NSLog(@"sssdsd----%@",insert);
     if (![insert isEqual:@"failed"]) {
         [[NSUserDefaults standardUserDefaults]setObject:email_id.text forKey:@"login"];
         
@@ -58,7 +59,7 @@
     [AppDelegate appDelegate].mainNavigationController.navigationBarHidden=YES;
     [self.navigationController pushViewController:[AppDelegate appDelegate].container animated:YES];
         
-        recent.address=[NSString stringWithFormat:@"%@ , %@",[insert valueForKey:@"Address"],[insert valueForKey:@"City"]];
+        recent.address=[NSString stringWithFormat:@"%@",[insert valueForKey:@"Address"]];
         recent.amt=[insert valueForKey:@"ParkingRate"];
         recent.locationcode=[insert valueForKey:@"PaymentConfirmationCode"];
         recent.lot_id=[insert valueForKey:@"ValetLotId"];
@@ -69,7 +70,7 @@
         [[NSUserDefaults standardUserDefaults]setObject:recent.amt forKey:@"amt"];
         [[NSUserDefaults standardUserDefaults]setObject:recent.locationcode forKey:@"locationcode"];
         [[NSUserDefaults standardUserDefaults]setObject:recent.lot_id forKey:@"lot_id"];
-        [[NSUserDefaults standardUserDefaults]setObject:[NSString stringWithFormat:@"%@ %@",[insert valueForKey:@"State"],[insert valueForKey:@"Zipcode"]] forKey:@"addr1"];
+        [[NSUserDefaults standardUserDefaults]setObject:[NSString stringWithFormat:@"%@ , %@ %@",[insert valueForKey:@"City"],[insert valueForKey:@"State"],[insert valueForKey:@"Zipcode"]] forKey:@"addr1"];
 
     }
     else{

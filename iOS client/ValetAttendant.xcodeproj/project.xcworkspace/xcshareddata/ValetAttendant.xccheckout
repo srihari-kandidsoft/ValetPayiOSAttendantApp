@@ -5,31 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>9E8F09A4-182D-43FD-84A4-32DB4DF3F4F2</string>
+	<string>AB0C6608-D88C-4AC0-BF3E-4F9B5570E741</string>
 	<key>IDESourceControlProjectName</key>
 	<string>ValetAttendant</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9CEBF944-6086-4534-82B1-9E51B537F278</key>
+		<string>https://github.com/srihari-kandidsoft/ValetPayiOSAttendantApp.git</string>
+	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ValetAttendant.xcodeproj/project.xcworkspace</string>
+	<string>iOS client/ValetAttendant.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>FCE1126B-DFE4-43C6-B83A-03288C03A618</key>
-		<string>../..</string>
+		<key>9CEBF944-6086-4534-82B1-9E51B537F278</key>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/srihari-kandidsoft/ValetPayiOSapp.git</string>
+	<string>https://github.com/srihari-kandidsoft/ValetPayiOSAttendantApp.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>FCE1126B-DFE4-43C6-B83A-03288C03A618</string>
+	<string>9CEBF944-6086-4534-82B1-9E51B537F278</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>FCE1126B-DFE4-43C6-B83A-03288C03A618</string>
+			<string>9CEBF944-6086-4534-82B1-9E51B537F278</string>
 			<key>IDESourceControlWCCName</key>
-			<string>ValetAttendant</string>
+			<string>ValetPayiOSAttendantApp</string>
 		</dict>
 	</array>
 </dict>

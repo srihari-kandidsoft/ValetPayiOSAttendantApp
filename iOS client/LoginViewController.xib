@@ -30,7 +30,7 @@
                             <rect key="frame" x="0.0" y="51" width="320" height="220"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="VALETPAYCODE" textAlignment="center" minimumFontSize="17" background="login_username.png" id="da6-1I-0Y1">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="VALET CODE" textAlignment="center" minimumFontSize="17" background="login_username.png" id="da6-1I-0Y1">
                             <rect key="frame" x="25" y="291" width="270" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
