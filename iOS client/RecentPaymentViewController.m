@@ -94,60 +94,77 @@
         cell = [[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleSubtitle) reuseIdentifier:cellidentifier];
         cell.backgroundColor=[UIColor clearColor];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        //scroll view
+        
+        UIScrollView * scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(-10, 0, 330,125)];
+        scrollView.contentSize = CGSizeMake(500, 125);
+        scrollView.delegate = self;
+        scrollView.showsHorizontalScrollIndicator=NO;
+        scrollView.showsVerticalScrollIndicator=NO;
+        scrollView.tag = 0;
         
         UILabel *min_lbl = [[UILabel alloc] initWithFrame:CGRectMake(300,5,30,20)];
         [min_lbl setTag:1];
         min_lbl.textColor = [UIColor whiteColor];
         [min_lbl setBackgroundColor:[UIColor clearColor]];
         [min_lbl setFont:[UIFont fontWithName:@"Avenir" size:12]];
-        [cell.contentView addSubview:min_lbl];
+        [scrollView addSubview:min_lbl];
+;
         
         UILabel *Name_lbl = [[UILabel alloc] initWithFrame:CGRectMake(27.5,15,200,20)];
         [Name_lbl setTag:2];
         Name_lbl.textColor = [UIColor whiteColor];
         [Name_lbl setBackgroundColor:[UIColor clearColor]];
         [Name_lbl setFont:[UIFont fontWithName:@"Avenir-Black" size:25]];
-        [cell.contentView addSubview:Name_lbl];
+        [scrollView addSubview:Name_lbl];
+;
         
         UIImageView *key=[[UIImageView alloc]initWithFrame:CGRectMake(27.5, 42.5, 14, 14)];
         key.image=[UIImage imageNamed:@"recent_key_icon.png"];
-        [cell.contentView addSubview:key];
+        [scrollView addSubview:key];
+;
         
         UILabel *CarName_lbl = [[UILabel alloc] initWithFrame:CGRectMake(43,40.5,200,20)];
         [CarName_lbl setTag:3];
         CarName_lbl.textColor = [UIColor whiteColor];
         [CarName_lbl setBackgroundColor:[UIColor clearColor]];
         [CarName_lbl setFont:[UIFont fontWithName:@"Avenir" size:13]];
-        [cell.contentView addSubview:CarName_lbl];
+        [scrollView addSubview:CarName_lbl];
+;
         
         UIImageView *star=[[UIImageView alloc]initWithFrame:CGRectMake(27.5, 65, 14, 14)];
         star.image=[UIImage imageNamed:@"recent_star_icon.png"];
-        [cell.contentView addSubview:star];
+        [scrollView addSubview:star];
+;
         
         UILabel *CarNumber_lbl = [[UILabel alloc] initWithFrame:CGRectMake(43,63,200,20)];
         [CarNumber_lbl setTag:4];
         CarNumber_lbl.textColor = [UIColor whiteColor];
         [CarNumber_lbl setBackgroundColor:[UIColor clearColor]];
         [CarNumber_lbl setFont:[UIFont fontWithName:@"Avenir-Black" size:14]];
-        [cell.contentView addSubview:CarNumber_lbl];
+        [scrollView addSubview:CarNumber_lbl];
+;
         
         UIImageView *clk=[[UIImageView alloc]initWithFrame:CGRectMake(27.5, 95, 14, 14)];
         clk.image=[UIImage imageNamed:@"recent_clock_icon.png"];
-        [cell.contentView addSubview:clk];
+        [scrollView addSubview:clk];
+;
         
         UILabel *Time_lbl = [[UILabel alloc] initWithFrame:CGRectMake(43,93,200,20)];
         [Time_lbl setTag:5];
         Time_lbl.textColor = [UIColor whiteColor];
         [Time_lbl setBackgroundColor:[UIColor clearColor]];
         [Time_lbl setFont:[UIFont fontWithName:@"Avenir" size:14]];
-        [cell.contentView addSubview:Time_lbl];
+        [scrollView addSubview:Time_lbl];
+;
         
         UILabel *amt1 = [[UILabel alloc] initWithFrame:CGRectMake(252,65,100,20)];
         [amt1 setTag:7];
         amt1.textColor = [UIColor whiteColor];
         [amt1 setBackgroundColor:[UIColor clearColor]];
         [amt1 setFont:[UIFont fontWithName:@"Avenir-Black" size:13]];
-        [cell.contentView addSubview:amt1];
+        [scrollView addSubview:amt1];
+;
         
         UILabel *amtfloat = [[UILabel alloc] initWithFrame:CGRectMake(266,88,50,20)];
         [amtfloat setTag:8];
@@ -156,7 +173,8 @@
         amtfloat.textColor = [UIColor greenColor];
         [amtfloat setBackgroundColor:[UIColor clearColor]];
         [amtfloat setFont:[UIFont fontWithName:@"Avenir-Black" size:13]];
-        [cell.contentView addSubview:amtfloat];
+        [scrollView addSubview:amtfloat];
+;
         
         UILabel *amtmain = [[UILabel alloc] initWithFrame:CGRectMake(218,93,50,20)];
         [amtmain setTag:6];
@@ -164,20 +182,27 @@
         amtmain.textColor = [UIColor greenColor];
         [amtmain setBackgroundColor:[UIColor clearColor]];
         [amtmain setFont:[UIFont fontWithName:@"Avenir-Black" size:25]];
-        [cell.contentView addSubview:amtmain];
+        [scrollView addSubview:amtmain];
+        
+        [cell.contentView addSubview:scrollView];
+
     
     }
-    
-    // Swipe Left
-    UISwipeGestureRecognizer * Swipeleft=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeleft:)];
-    Swipeleft.direction=UISwipeGestureRecognizerDirectionLeft;
-    [cell addGestureRecognizer:Swipeleft];
+
+    UIView *separatorView = [[UIView alloc] initWithFrame:CGRectMake(0, 123, 1024, 1)];
+    separatorView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    separatorView.layer.borderWidth = 1.0;
+    [cell.contentView addSubview:separatorView];
+//    // Swipe Left
+//    UISwipeGestureRecognizer * Swipeleft=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeleft:)];
+//    Swipeleft.direction=UISwipeGestureRecognizerDirectionLeft;
+//    [cell addGestureRecognizer:Swipeleft];
     
     
     // SwipeRight
-    UISwipeGestureRecognizer * Swiperight=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swiperight:)];
-    Swiperight.direction=UISwipeGestureRecognizerDirectionRight;
-    [cell addGestureRecognizer:Swiperight];
+//    UISwipeGestureRecognizer * Swiperight=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swiperight:)];
+//    Swiperight.direction=UISwipeGestureRecognizerDirectionRight;
+//    [cell addGestureRecognizer:Swiperight];
     
     
     
@@ -261,33 +286,48 @@
     
     return  cell;
 }
+//scrollview dlegates
 
--(void)swipeleft:(UISwipeGestureRecognizer*)gestureRecognizer
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+
 {
-    //Do what you want here
-    if (![[NSUserDefaults standardUserDefaults]valueForKey:@"last"]) {
-        
-        UITableViewCell *cell=(UITableViewCell *)gestureRecognizer.view;
-        
-        swiped_Index = [_Table indexPathForCell:cell];
-        
-        [self fetchcheckout];
-    }
 }
 
--(void)swiperight:(UISwipeGestureRecognizer*)gestureRecognizer
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+
 {
-    if (![[NSUserDefaults standardUserDefaults]valueForKey:@"last"]) {
-        UITableViewCell *cell=(UITableViewCell *)gestureRecognizer.view;
-        
-        swiped_Index = [_Table indexPathForCell:cell];
-        
-        
-      [self fetchcheckout];
-        
+
+    BOOL enabled=[[[NSUserDefaults standardUserDefaults]valueForKeyPath:@"refresh"]integerValue];
+    if (enabled ==0 && (![[NSUserDefaults standardUserDefaults]valueForKey:@"last"]))
+    {
+        [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"deleted"];
+    if (scrollView == _Table) {
+        return;
     }
+    UITableViewCell * cell = (UITableViewCell*) [[[scrollView superview] superview] superview];
     
+    swiped_Index = (NSIndexPath*)[_Table indexPathForCell:cell];
+  
+        NSString *paymentid=[[insert objectAtIndex:swiped_Index.row]valueForKey:@"PaymentId"];
+    [insert removeObjectAtIndex:swiped_Index.row];
+    
+    [_Table beginUpdates];
+    
+    [_Table deleteRowsAtIndexPaths:[[NSArray alloc] initWithObjects:swiped_Index, nil] withRowAnimation:UITableViewRowAnimationFade];
+    
+    [_Table endUpdates];
+    
+        dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            
+               [self fetchcheckout:paymentid];
+           
+        });
+
+    
+    }
+ 
 }
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 {
@@ -339,17 +379,18 @@
 
 -(void)fetchRecentPayment1
 {
-    NSLog(@"hi----%d",[insert count]);
-    
+     BOOL enabled=[[[NSUserDefaults standardUserDefaults]valueForKeyPath:@"deleted"]integerValue];
+    if (enabled==0)
+    {
     if (![AppDelegate isNetworkAvailable]) {
         _Table.hidden=YES;
         
         [AppDelegate Reachabiltyalert];
         return ;
     }
+    [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"refresh"];
     //call the API
-    NSLog(@"dfdfdf%@",[[NSUserDefaults standardUserDefaults]valueForKey:@"last"]);
-    
+     //  _Table.userInteractionEnabled=NO;
     if (![[NSUserDefaults standardUserDefaults]valueForKey:@"last"]) {
         act_view.hidden=NO;
         [act_view startAnimating];
@@ -363,23 +404,23 @@
             });
             dispatch_sync(dispatch_get_main_queue(), ^{
                 NSLog(@"dfdfdf%d",[insert count]);
-                [_Table reloadData];
+                [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"user"];
                 [act_view stopAnimating];
+                _Table.userInteractionEnabled=YES;
+                [_Table reloadData];
 
+                [[NSUserDefaults standardUserDefaults]setBool:NO forKey:@"refresh"];
             });
             
         });
 
-
+    }
     }
     
   }
--(void)timer
-{
-   }
+
 -(void)fetchRecentPayment
 {
-    NSLog(@"hi----%d",[insert count]);
     
     if (![AppDelegate isNetworkAvailable]) {
         _Table.hidden=YES;
@@ -387,7 +428,6 @@
         [AppDelegate Reachabiltyalert];
         return ;
     }
-    [self performSelector:@selector(timer) withObject:nil afterDelay:25];
     
     
 
@@ -399,23 +439,22 @@
     if (![[NSUserDefaults standardUserDefaults]valueForKey:@"last"]) {
         
         parameter=[NSString stringWithFormat:@"valetlot_id=%@&client=mobile&Status=0",[[NSUserDefaults standardUserDefaults]valueForKey:@"lot_id"]];
+        [[NSUserDefaults standardUserDefaults]setBool:NO forKey:@"deleted"];
            }
     else{
         parameter=[NSString stringWithFormat:@"valetlot_id=%@&client=mobile",[[NSUserDefaults standardUserDefaults]valueForKey:@"lot_id"]];
     }
-    insert= [[AppDelegate downLoadFrom:[NSString stringWithFormat:@"fetch_valet_transactions.php"] parameters:parameter]valueForKey:@"result"];
+    insert= [[[AppDelegate downLoadFrom:[NSString stringWithFormat:@"fetch_valet_transactions.php"] parameters:parameter]valueForKey:@"result"]mutableCopy];
     NSLog(@"dfdfdf%d",[insert count]);
-   
+    _Table.userInteractionEnabled=YES;
 
     [_Table reloadData];
 }
 -(void)myTVReloadMethod {
    [_Table reloadData];
 }
--(void)fetchcheckout
+-(void)fetchcheckout:(NSString *)paymentid
 {
-    
-    //Checking network rechability
     
     if (![AppDelegate isNetworkAvailable]) {
         
@@ -423,15 +462,15 @@
         return ;
         
     }
-    //call the API
-    //Do what you want here
+   
     if (![[NSUserDefaults standardUserDefaults]valueForKey:@"last"]) {
-        NSString *parameter=[NSString stringWithFormat:@"PaymentId=%@&Status=1",[[insert objectAtIndex:swiped_Index.row]valueForKey:@"PaymentId"]];
+        NSLog(@"dsdsds-------%@",  paymentid);
+        NSString *parameter=[NSString stringWithFormat:@"PaymentId=%@&Status=1",paymentid];
         
         NSMutableArray *  fetch =[[NSMutableArray alloc]init];
         
         
-        fetch= [[AppDelegate downLoadFrom:[NSString stringWithFormat:@"checkout_customer.php"] parameters:parameter]valueForKey:@"result"];
+        fetch= [[[AppDelegate downLoadFrom:[NSString stringWithFormat:@"checkout_customer.php"] parameters:parameter]valueForKey:@"result"]mutableCopy];
         
         NSLog(@"dfdfdf%@",fetch);
         [self fetchRecentPayment];

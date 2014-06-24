@@ -94,6 +94,8 @@
 		8CBDE50D18FE9C7C007D3B96 /* RecentPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBDE50B18FE9C7C007D3B96 /* RecentPaymentViewController.m */; };
 		8CBDE50E18FE9C7C007D3B96 /* RecentPaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CBDE50C18FE9C7C007D3B96 /* RecentPaymentViewController.xib */; };
 		8CC1FFEE19137B3E00BA8BBA /* valet_pay_All.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC1FFED19137B3E00BA8BBA /* valet_pay_All.png */; };
+		8CC395191941AA4100E55A1E /* LastPayment2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC395151941AA4100E55A1E /* LastPayment2X.png */; };
+		8CC3951A1941AA4100E55A1E /* LastPaymentX.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC395161941AA4100E55A1E /* LastPaymentX.png */; };
 		8CC585DA192AF8E10013BE0B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8CC585D9192AF8E10013BE0B /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
@@ -209,6 +211,8 @@
 		8CBDE50B18FE9C7C007D3B96 /* RecentPaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentPaymentViewController.m; sourceTree = "<group>"; };
 		8CBDE50C18FE9C7C007D3B96 /* RecentPaymentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecentPaymentViewController.xib; sourceTree = "<group>"; };
 		8CC1FFED19137B3E00BA8BBA /* valet_pay_All.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = valet_pay_All.png; sourceTree = "<group>"; };
+		8CC395151941AA4100E55A1E /* LastPayment2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LastPayment2X.png; sourceTree = "<group>"; };
+		8CC395161941AA4100E55A1E /* LastPaymentX.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LastPaymentX.png; sourceTree = "<group>"; };
 		8CC585D9192AF8E10013BE0B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -248,6 +252,8 @@
 		8C4F5A4418D2C2EF00104AB0 = {
 			isa = PBXGroup;
 			children = (
+				8CC395151941AA4100E55A1E /* LastPayment2X.png */,
+				8CC395161941AA4100E55A1E /* LastPaymentX.png */,
 				8CC585D9192AF8E10013BE0B /* Settings.bundle */,
 				8CC1FFED19137B3E00BA8BBA /* valet_pay_All.png */,
 				8C19A149190E067F00C4EDD0 /* Reachability */,
@@ -569,10 +575,12 @@
 			files = (
 				8CB8038019078A17001EECCD /* Icon.png in Resources */,
 				8C8126461900E9E9007503CE /* Valet Sign up App pg 2 -2.jpg in Resources */,
+				8CC395191941AA4100E55A1E /* LastPayment2X.png in Resources */,
 				8C81263A1900E9E9007503CE /* login_username.png in Resources */,
 				8CB8038B19078A17001EECCD /* Icon-76@2x.png in Resources */,
 				8C4F5AA318D2C92700104AB0 /* login_login@2x.png in Resources */,
 				8C4F5AA918D2C92700104AB0 /* valetpay_logo@2x.png in Resources */,
+				8CC3951A1941AA4100E55A1E /* LastPaymentX.png in Resources */,
 				8CB8039219078A17001EECCD /* iTunesArtwork.png in Resources */,
 				8C4F5AA118D2C92700104AB0 /* common_bg_iph5@2x.png in Resources */,
 				8C8126451900E9E9007503CE /* recent_star_icon@2x.png in Resources */,
