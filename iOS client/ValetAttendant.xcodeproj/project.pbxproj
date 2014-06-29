@@ -94,6 +94,10 @@
 		8CBDE50D18FE9C7C007D3B96 /* RecentPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBDE50B18FE9C7C007D3B96 /* RecentPaymentViewController.m */; };
 		8CBDE50E18FE9C7C007D3B96 /* RecentPaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CBDE50C18FE9C7C007D3B96 /* RecentPaymentViewController.xib */; };
 		8CC1FFEE19137B3E00BA8BBA /* valet_pay_All.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC1FFED19137B3E00BA8BBA /* valet_pay_All.png */; };
+		8CC29D6D195BE78B00B8224C /* High Resolution Ring 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC29D6C195BE78B00B8224C /* High Resolution Ring 1.png */; };
+		8CC29D6F195BF0B600B8224C /* High Resolution RinX.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC29D6E195BF0B600B8224C /* High Resolution RinX.png */; };
+		8CC29D71195BF26A00B8224C /* All Payments IconX .png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC29D70195BF26A00B8224C /* All Payments IconX .png */; };
+		8CC29D73195BF66600B8224C /* High Resolution Ring .png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC29D72195BF66600B8224C /* High Resolution Ring .png */; };
 		8CC395191941AA4100E55A1E /* LastPayment2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC395151941AA4100E55A1E /* LastPayment2X.png */; };
 		8CC3951A1941AA4100E55A1E /* LastPaymentX.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC395161941AA4100E55A1E /* LastPaymentX.png */; };
 		8CC585DA192AF8E10013BE0B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8CC585D9192AF8E10013BE0B /* Settings.bundle */; };
@@ -211,6 +215,10 @@
 		8CBDE50B18FE9C7C007D3B96 /* RecentPaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentPaymentViewController.m; sourceTree = "<group>"; };
 		8CBDE50C18FE9C7C007D3B96 /* RecentPaymentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecentPaymentViewController.xib; sourceTree = "<group>"; };
 		8CC1FFED19137B3E00BA8BBA /* valet_pay_All.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = valet_pay_All.png; sourceTree = "<group>"; };
+		8CC29D6C195BE78B00B8224C /* High Resolution Ring 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "High Resolution Ring 1.png"; sourceTree = "<group>"; };
+		8CC29D6E195BF0B600B8224C /* High Resolution RinX.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "High Resolution RinX.png"; sourceTree = "<group>"; };
+		8CC29D70195BF26A00B8224C /* All Payments IconX .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "All Payments IconX .png"; sourceTree = "<group>"; };
+		8CC29D72195BF66600B8224C /* High Resolution Ring .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "High Resolution Ring .png"; sourceTree = "<group>"; };
 		8CC395151941AA4100E55A1E /* LastPayment2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LastPayment2X.png; sourceTree = "<group>"; };
 		8CC395161941AA4100E55A1E /* LastPaymentX.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LastPaymentX.png; sourceTree = "<group>"; };
 		8CC585D9192AF8E10013BE0B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -252,7 +260,11 @@
 		8C4F5A4418D2C2EF00104AB0 = {
 			isa = PBXGroup;
 			children = (
+				8CC29D72195BF66600B8224C /* High Resolution Ring .png */,
+				8CC29D70195BF26A00B8224C /* All Payments IconX .png */,
+				8CC29D6E195BF0B600B8224C /* High Resolution RinX.png */,
 				8CC395151941AA4100E55A1E /* LastPayment2X.png */,
+				8CC29D6C195BE78B00B8224C /* High Resolution Ring 1.png */,
 				8CC395161941AA4100E55A1E /* LastPaymentX.png */,
 				8CC585D9192AF8E10013BE0B /* Settings.bundle */,
 				8CC1FFED19137B3E00BA8BBA /* valet_pay_All.png */,
@@ -596,6 +608,7 @@
 				8C4F5AAE18D2C92700104AB0 /* valet_pay_settings_on_duty.png in Resources */,
 				8CB8039319078A17001EECCD /* iTunesArtwork@2x.png in Resources */,
 				8C81263E1900E9E9007503CE /* recent_clock_icon.png in Resources */,
+				8CC29D71195BF26A00B8224C /* All Payments IconX .png in Resources */,
 				8CB8037F19078A17001EECCD /* Icon-Small@2x.png in Resources */,
 				8CB8038819078A17001EECCD /* Icon-72.png in Resources */,
 				8CB8037E19078A17001EECCD /* Icon-Small.png in Resources */,
@@ -603,6 +616,7 @@
 				8CB8037C19078A17001EECCD /* Icon-Small-50.png in Resources */,
 				8C81263B1900E9E9007503CE /* login_username@2x.png in Resources */,
 				8C4F5A9F18D2C92700104AB0 /* common_bg.png in Resources */,
+				8CC29D73195BF66600B8224C /* High Resolution Ring .png in Resources */,
 				8C81263F1900E9E9007503CE /* recent_clock_icon@2x.png in Resources */,
 				8CB8037B19078A17001EECCD /* Icon-72@2x.png in Resources */,
 				8C4F5AAF18D2C92700104AB0 /* valet_pay_settings_on_duty@2x.png in Resources */,
@@ -631,6 +645,7 @@
 				8C8126391900E9E9007503CE /* login_password@2x.png in Resources */,
 				8CBDE50E18FE9C7C007D3B96 /* RecentPaymentViewController.xib in Resources */,
 				8C4F5AB218D2C92700104AB0 /* splash.png in Resources */,
+				8CC29D6D195BE78B00B8224C /* High Resolution Ring 1.png in Resources */,
 				8C4F5A6418D2C2EF00104AB0 /* Main.storyboard in Resources */,
 				8CB8038619078A17001EECCD /* Icon-60.png in Resources */,
 				8CB8038519078A17001EECCD /* Icon-40@2x.png in Resources */,
@@ -641,6 +656,7 @@
 				8CB8038419078A17001EECCD /* Icon-40.png in Resources */,
 				8C81263C1900E9E9007503CE /* nav_recent.png in Resources */,
 				8C81264A1901030E007503CE /* nav_list.png in Resources */,
+				8CC29D6F195BF0B600B8224C /* High Resolution RinX.png in Resources */,
 				8C4F5AB418D2C92700104AB0 /* splash_ip5@2x.png in Resources */,
 				8C8126401900E9E9007503CE /* recent_image_frame.png in Resources */,
 				8C4F5AA018D2C92700104AB0 /* common_bg_iph4@2x.png in Resources */,

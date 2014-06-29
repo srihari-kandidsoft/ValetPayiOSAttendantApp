@@ -65,9 +65,11 @@
 
 {
     
-    // NSLog(@"the URL ---- >%@",url);
+     NSLog(@"the URL ---- >%@",url);
     //   NSLog(@"para meters -----> %@",para_str);
     NSString *url1;
+    NSString *parms;
+
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     //demo
@@ -75,12 +77,16 @@
     // NSLog(@"url=======%hhd",enabled);
 
     if (enabled) {
-        url1=[NSString stringWithFormat:@"http://api.valetpayapp.com/demo/%@",url ];
+        url1=[NSString stringWithFormat:@"http://api.valetpayapp.com/%@",url ];
+        parms=[NSString stringWithFormat:@"%@&mode=demo",para_str];
+        para_str=parms;
     }
     else
     {
         url1=[NSString stringWithFormat:@"http://api.valetpayapp.com/%@",url ];
-        
+//        parms=[NSString stringWithFormat:@"%@&mode=demo",para_str];
+//        para_str=parms;
+//         NSLog(@"para meters -----> %@",para_str);
         
     }
   //NSLog(@"url=======%@",url1);

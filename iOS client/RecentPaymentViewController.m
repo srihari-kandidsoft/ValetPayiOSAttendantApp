@@ -397,10 +397,9 @@
 
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         __block    NSString *parameter;
-            insert =[[NSMutableArray alloc]init];
             dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 parameter=[NSString stringWithFormat:@"valetlot_id=%@&client=mobile&Status=0",[[NSUserDefaults standardUserDefaults]valueForKey:@"lot_id"]];
- insert= [[AppDelegate downLoadFrom:[NSString stringWithFormat:@"fetch_valet_transactions.php"] parameters:parameter]valueForKey:@"result"];
+ insert= [[[AppDelegate downLoadFrom:[NSString stringWithFormat:@"fetch_valet_transactions.php"] parameters:parameter]valueForKey:@"result"]mutableCopy];
             });
             dispatch_sync(dispatch_get_main_queue(), ^{
                 NSLog(@"dfdfdf%d",[insert count]);
@@ -432,7 +431,6 @@
     
 
     NSString *parameter;
-    insert =[[NSMutableArray alloc]init];
     //call the API
        NSLog(@"dfdfdf%@",[[NSUserDefaults standardUserDefaults]valueForKey:@"last"]);
 
