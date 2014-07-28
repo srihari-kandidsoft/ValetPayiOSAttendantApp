@@ -305,9 +305,10 @@
     
     NSLog(@"%@",[[NSUserDefaults standardUserDefaults]valueForKey:K_CURR_DEMO_VALUE]);
     NSLog(@"%@",[[NSUserDefaults standardUserDefaults]valueForKey:K_PREV_DEMO_VALUE]);
-    if (!([[NSUserDefaults standardUserDefaults]valueForKey:K_PREV_DEMO_VALUE]==[[NSUserDefaults standardUserDefaults]valueForKey:K_CURR_DEMO_VALUE]))
-    {
-       
+//    if (!([[NSUserDefaults standardUserDefaults]valueForKey:K_PREV_DEMO_VALUE]==[[NSUserDefaults standardUserDefaults]valueForKey:K_CURR_DEMO_VALUE]))
+         if (![[[NSUserDefaults standardUserDefaults]valueForKey:@"login"]length])
+    
+         {
         //remove nususer defaults value..
         
         [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"login"];

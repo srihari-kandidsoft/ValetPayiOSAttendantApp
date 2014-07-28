@@ -399,6 +399,12 @@
         __block    NSString *parameter;
             dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 parameter=[NSString stringWithFormat:@"valetlot_id=%@&client=mobile&Status=0",[[NSUserDefaults standardUserDefaults]valueForKey:@"lot_id"]];
+                if (![AppDelegate isNetworkAvailable]) {
+                    _Table.hidden=YES;
+                    
+                    [AppDelegate Reachabiltyalert];
+                    return ;
+                }
  insert= [[[AppDelegate downLoadFrom:[NSString stringWithFormat:@"fetch_valet_transactions.php"] parameters:parameter]valueForKey:@"result"]mutableCopy];
             });
             dispatch_sync(dispatch_get_main_queue(), ^{
@@ -443,7 +449,7 @@
         parameter=[NSString stringWithFormat:@"valetlot_id=%@&client=mobile",[[NSUserDefaults standardUserDefaults]valueForKey:@"lot_id"]];
     }
     insert= [[[AppDelegate downLoadFrom:[NSString stringWithFormat:@"fetch_valet_transactions.php"] parameters:parameter]valueForKey:@"result"]mutableCopy];
-    NSLog(@"dfdfdf%d",[insert count]);
+    NSLog(@"dfdfdf%@",insert);
     _Table.userInteractionEnabled=YES;
 
     [_Table reloadData];
