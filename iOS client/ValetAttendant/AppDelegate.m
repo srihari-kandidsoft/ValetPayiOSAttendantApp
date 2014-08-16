@@ -22,6 +22,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    //note: iOS only allows one crash reporting tool per app; if using another, set to: NO
+    [Flurry setCrashReportingEnabled:YES];
+    
+    
+    // Replace YOUR_API_KEY with the api key in the downloaded package
+    
+    [Flurry startSession:@"H5FJ2MFMCMCPKXTQCKJQ"];
+
     NSLog(@"dfdfdfdf%lu",(unsigned long)[[[NSUserDefaults standardUserDefaults]valueForKey:@"login"]length ]);
     // Override point for customization after application launch.
     if (![[[NSUserDefaults standardUserDefaults]valueForKey:@"login"]length ] || !([[NSUserDefaults standardUserDefaults]valueForKey:K_PREV_DEMO_VALUE]==[[NSUserDefaults standardUserDefaults]valueForKey:K_CURR_DEMO_VALUE])) {

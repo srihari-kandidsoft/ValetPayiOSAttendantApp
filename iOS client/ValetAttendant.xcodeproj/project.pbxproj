@@ -57,6 +57,7 @@
 		8C8126461900E9E9007503CE /* Valet Sign up App pg 2 -2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8C8126371900E9E9007503CE /* Valet Sign up App pg 2 -2.jpg */; };
 		8C8126481900ECF1007503CE /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C8126471900ECF1007503CE /* black.png */; };
 		8C81264A1901030E007503CE /* nav_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C8126491901030E007503CE /* nav_list.png */; };
+		8C90F906199F1790005C975A /* libFlurry_5.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C90F905199F1790005C975A /* libFlurry_5.2.0.a */; };
 		8CB8037A19078A17001EECCD /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8035919078A17001EECCD /* Icon-72.png */; };
 		8CB8037B19078A17001EECCD /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8035A19078A17001EECCD /* Icon-72@2x.png */; };
 		8CB8037C19078A17001EECCD /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB8035B19078A17001EECCD /* Icon-Small-50.png */; };
@@ -173,6 +174,8 @@
 		8C8126371900E9E9007503CE /* Valet Sign up App pg 2 -2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Valet Sign up App pg 2 -2.jpg"; sourceTree = "<group>"; };
 		8C8126471900ECF1007503CE /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black.png; sourceTree = "<group>"; };
 		8C8126491901030E007503CE /* nav_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_list.png; sourceTree = "<group>"; };
+		8C90F904199F1790005C975A /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		8C90F905199F1790005C975A /* libFlurry_5.2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_5.2.0.a; sourceTree = "<group>"; };
 		8CB8035919078A17001EECCD /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		8CB8035A19078A17001EECCD /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
 		8CB8035B19078A17001EECCD /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C4F5A5318D2C2EF00104AB0 /* CoreGraphics.framework in Frameworks */,
+				8C90F906199F1790005C975A /* libFlurry_5.2.0.a in Frameworks */,
 				8C4F5A5518D2C2EF00104AB0 /* UIKit.framework in Frameworks */,
 				8C4F5A5118D2C2EF00104AB0 /* Foundation.framework in Frameworks */,
 			);
@@ -266,6 +270,7 @@
 		8C4F5A4418D2C2EF00104AB0 = {
 			isa = PBXGroup;
 			children = (
+				8C90F903199F1790005C975A /* Flurry */,
 				8CDB66AF199F0D9A00D67075 /* All Payments.png */,
 				8CDB66B0199F0D9A00D67075 /* All Payments@2x.png */,
 				8CC29D72195BF66600B8224C /* High Resolution Ring .png */,
@@ -446,6 +451,15 @@
 			);
 			name = recpay;
 			path = ../recpay;
+			sourceTree = "<group>";
+		};
+		8C90F903199F1790005C975A /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				8C90F904199F1790005C975A /* Flurry.h */,
+				8C90F905199F1790005C975A /* libFlurry_5.2.0.a */,
+			);
+			path = Flurry;
 			sourceTree = "<group>";
 		};
 		8CB8034B19078A17001EECCD /* attendant-app-icon */ = {
@@ -849,6 +863,10 @@
 				GCC_PREFIX_HEADER = "ValetAttendant/ValetAttendant-Prefix.pch";
 				INFOPLIST_FILE = "ValetAttendant/ValetAttendant-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Flurry",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6C4F0E62-9EEF-4506-9440-2F12EAFD4AA6";
 				VALID_ARCHS = "armv7 armv7s";
@@ -871,6 +889,10 @@
 				GCC_PREFIX_HEADER = "ValetAttendant/ValetAttendant-Prefix.pch";
 				INFOPLIST_FILE = "ValetAttendant/ValetAttendant-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Flurry",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6C4F0E62-9EEF-4506-9440-2F12EAFD4AA6";
 				VALID_ARCHS = "armv7 armv7s";
