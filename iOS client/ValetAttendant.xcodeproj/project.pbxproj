@@ -101,6 +101,8 @@
 		8CC395191941AA4100E55A1E /* LastPayment2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC395151941AA4100E55A1E /* LastPayment2X.png */; };
 		8CC3951A1941AA4100E55A1E /* LastPaymentX.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC395161941AA4100E55A1E /* LastPaymentX.png */; };
 		8CC585DA192AF8E10013BE0B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8CC585D9192AF8E10013BE0B /* Settings.bundle */; };
+		8CDB66B1199F0D9A00D67075 /* All Payments.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CDB66AF199F0D9A00D67075 /* All Payments.png */; };
+		8CDB66B2199F0D9A00D67075 /* All Payments@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CDB66B0199F0D9A00D67075 /* All Payments@2x.png */; };
 		CB704E16198C7FB800ADE55E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB704E15198C7FB800ADE55E /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -223,6 +225,8 @@
 		8CC395151941AA4100E55A1E /* LastPayment2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LastPayment2X.png; sourceTree = "<group>"; };
 		8CC395161941AA4100E55A1E /* LastPaymentX.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LastPaymentX.png; sourceTree = "<group>"; };
 		8CC585D9192AF8E10013BE0B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		8CDB66AF199F0D9A00D67075 /* All Payments.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "All Payments.png"; sourceTree = "<group>"; };
+		8CDB66B0199F0D9A00D67075 /* All Payments@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "All Payments@2x.png"; sourceTree = "<group>"; };
 		CB704E15198C7FB800ADE55E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -262,6 +266,8 @@
 		8C4F5A4418D2C2EF00104AB0 = {
 			isa = PBXGroup;
 			children = (
+				8CDB66AF199F0D9A00D67075 /* All Payments.png */,
+				8CDB66B0199F0D9A00D67075 /* All Payments@2x.png */,
 				8CC29D72195BF66600B8224C /* High Resolution Ring .png */,
 				8CC29D70195BF26A00B8224C /* All Payments IconX .png */,
 				8CC29D6E195BF0B600B8224C /* High Resolution RinX.png */,
@@ -604,6 +610,7 @@
 				8C4F5AB318D2C92700104AB0 /* splash_ip4@2x.png in Resources */,
 				8CB8039019078A17001EECCD /* Icon.png in Resources */,
 				8C8126481900ECF1007503CE /* black.png in Resources */,
+				8CDB66B2199F0D9A00D67075 /* All Payments@2x.png in Resources */,
 				8C8126411900E9E9007503CE /* recent_image_frame@2x.png in Resources */,
 				8CB8038319078A17001EECCD /* iTunesArtwork@2x.png in Resources */,
 				8C4F5AB018D2C92700104AB0 /* valet_pay_settings_recent.png in Resources */,
@@ -655,6 +662,7 @@
 				8C8126441900E9E9007503CE /* recent_star_icon.png in Resources */,
 				8CB8038C19078A17001EECCD /* Icon-Small-50.png in Resources */,
 				8CB8038119078A17001EECCD /* Icon@2x.png in Resources */,
+				8CDB66B1199F0D9A00D67075 /* All Payments.png in Resources */,
 				8CB8038919078A17001EECCD /* Icon-72@2x.png in Resources */,
 				8CB8038419078A17001EECCD /* Icon-40.png in Resources */,
 				CB704E16198C7FB800ADE55E /* Default-568h@2x.png in Resources */,
@@ -762,8 +770,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Srihari Padmanabhan (88496GPH9K)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Srihari Padmanabhan (88496GPH9K)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Srinivas Oddati (8CMESY86V9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Srinivas Oddati (8CMESY86V9)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -781,7 +789,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "808A24CA-E84C-4AEA-9D6F-FA2466603239";
+				PROVISIONING_PROFILE = "6C4F0E62-9EEF-4506-9440-2F12EAFD4AA6";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = "armv7 armv7s";
 			};
@@ -807,8 +815,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Srihari Padmanabhan (88496GPH9K)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Srihari Padmanabhan (88496GPH9K)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Srinivas Oddati (8CMESY86V9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Srinivas Oddati (8CMESY86V9)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -819,7 +827,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PROVISIONING_PROFILE = "808A24CA-E84C-4AEA-9D6F-FA2466603239";
+				PROVISIONING_PROFILE = "6C4F0E62-9EEF-4506-9440-2F12EAFD4AA6";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv7 armv7s";
@@ -835,14 +843,14 @@
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Srihari Padmanabhan (88496GPH9K)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Srihari Padmanabhan (88496GPH9K)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Srinivas Oddati (8CMESY86V9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Srinivas Oddati (8CMESY86V9)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ValetAttendant/ValetAttendant-Prefix.pch";
 				INFOPLIST_FILE = "ValetAttendant/ValetAttendant-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "808A24CA-E84C-4AEA-9D6F-FA2466603239";
+				PROVISIONING_PROFILE = "6C4F0E62-9EEF-4506-9440-2F12EAFD4AA6";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
@@ -857,14 +865,14 @@
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Srihari Padmanabhan (88496GPH9K)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Srihari Padmanabhan (88496GPH9K)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Srinivas Oddati (8CMESY86V9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Srinivas Oddati (8CMESY86V9)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ValetAttendant/ValetAttendant-Prefix.pch";
 				INFOPLIST_FILE = "ValetAttendant/ValetAttendant-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "808A24CA-E84C-4AEA-9D6F-FA2466603239";
+				PROVISIONING_PROFILE = "6C4F0E62-9EEF-4506-9440-2F12EAFD4AA6";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};

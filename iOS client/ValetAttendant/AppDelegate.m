@@ -15,30 +15,30 @@
 @implementation AppDelegate
 {
     NSString *prevValue;
-
+    
 }
 @synthesize window,mainNavigationController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     NSLog(@"dfdfdfdf%lu",(unsigned long)[[[NSUserDefaults standardUserDefaults]valueForKey:@"login"]length ]);
     // Override point for customization after application launch.
     if (![[[NSUserDefaults standardUserDefaults]valueForKey:@"login"]length ] || !([[NSUserDefaults standardUserDefaults]valueForKey:K_PREV_DEMO_VALUE]==[[NSUserDefaults standardUserDefaults]valueForKey:K_CURR_DEMO_VALUE])) {
         prevValue=[[NSUserDefaults standardUserDefaults]valueForKey:K_CURR_DEMO_VALUE];
         [[NSUserDefaults standardUserDefaults]setObject:prevValue  forKey:K_PREV_DEMO_VALUE];
         NSLog(@"%@",[[NSUserDefaults standardUserDefaults]valueForKey:K_PREV_DEMO_VALUE]);
-
-    self.login = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
-    self.mainNavigationController=[[UINavigationController alloc]initWithRootViewController:self.login];
-    
-    self.window.rootViewController = self.mainNavigationController;
-        }
+        
+        self.login = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+        self.mainNavigationController=[[UINavigationController alloc]initWithRootViewController:self.login];
+        
+        self.window.rootViewController = self.mainNavigationController;
+    }
     else{
         
         //remove local value
         [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"last"];
-//set rootview controller
+        //set rootview controller
         RecentPaymentViewController *recent=[[RecentPaymentViewController alloc]initWithNibName:@"RecentPaymentViewController" bundle:nil];
         
         self.mainNavigationController = [[UINavigationController alloc]initWithRootViewController:recent];
@@ -46,15 +46,15 @@
         MenuViewController *menuViewController = [[MenuViewController alloc] init];
         
         self.container = [MFSideMenuContainerViewController
-                                               containerWithCenterViewController:[AppDelegate appDelegate].mainNavigationController
-                                               leftMenuViewController:menuViewController
-                                               rightMenuViewController:nil];
+                          containerWithCenterViewController:[AppDelegate appDelegate].mainNavigationController
+                          leftMenuViewController:menuViewController
+                          rightMenuViewController:nil];
         
         self.mainNavigationController=[[UINavigationController alloc]initWithRootViewController:self.container];
         
         self.window.rootViewController = self.mainNavigationController;
-      
-
+        
+        
     }
     self.mainNavigationController.navigationBarHidden=YES;
     [self.window makeKeyAndVisible];
@@ -65,31 +65,31 @@
 
 {
     
-     NSLog(@"the URL ---- >%@",url);
+    NSLog(@"the URL ---- >%@",url);
     //   NSLog(@"para meters -----> %@",para_str);
     NSString *url1;
-   // NSString *parms;
-
-   // NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    // NSString *parms;
+    
+    // NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     //demo
-  //  BOOL  enabled = [defaults boolForKey:@"enabled_preference"];
+    //  BOOL  enabled = [defaults boolForKey:@"enabled_preference"];
     // NSLog(@"url=======%hhd",enabled);
-
-  //  if (enabled) {
-  //      url1=[NSString stringWithFormat:@"http://api.valetpayapp.com/%@",url ];
-  //      parms=[NSString stringWithFormat:@"%@&mode=demo",para_str];
-  //      para_str=parms;
-  //  }
-  //  else
-  //  {
-        url1=[NSString stringWithFormat:@"http://api.valetpayapp.com/%@",url ];
-//        parms=[NSString stringWithFormat:@"%@&mode=demo",para_str];
-//        para_str=parms;
-//         NSLog(@"para meters -----> %@",para_str);
-        
-   // }
-  //NSLog(@"url=======%@",url1);
+    
+    //  if (enabled) {
+    //      url1=[NSString stringWithFormat:@"http://api.valetpayapp.com/%@",url ];
+    //      parms=[NSString stringWithFormat:@"%@&mode=demo",para_str];
+    //      para_str=parms;
+    //  }
+    //  else
+    //  {
+    url1=[NSString stringWithFormat:@"http://api.valetpayapp.com/%@",url ];
+    //        parms=[NSString stringWithFormat:@"%@&mode=demo",para_str];
+    //        para_str=parms;
+    //         NSLog(@"para meters -----> %@",para_str);
+    
+    // }
+    //NSLog(@"url=======%@",url1);
     NSMutableURLRequest * request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url1]];
     
     [request setHTTPMethod:@"POST"];
@@ -102,7 +102,7 @@
     
     
     // setup post string
-
+    
     
     NSMutableString *postString = [[NSMutableString alloc] init];
     
@@ -132,7 +132,7 @@
     
     NSLog(@"result-------%@",result);
     
-   // NSLog(@"result-------%@",[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:nil]);
+    // NSLog(@"result-------%@",[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:nil]);
     
     
     
@@ -189,8 +189,8 @@
     //remove local value
     [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"last"];
     
-        [self registerDefaultsFromSettingsBundle];
-  
+    [self registerDefaultsFromSettingsBundle];
+    
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
@@ -231,11 +231,19 @@
     }
     
 }
-
++ (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex==1) {
+        
+        RecentPaymentViewController *recen=[[RecentPaymentViewController alloc]init];
+        
+        [recen fetchRecentPayment];
+    }
+}
 +(void)Reachabiltyalert
 {
     
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Network Unreachable" message:@"Check your network Connection" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Network Unreachable" message:@"Check your network Connection" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Retry",nil];
     [alert show];
 }
 
@@ -265,7 +273,7 @@
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaultsToRegister];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
+    
     id LocationMe = [[NSUserDefaults standardUserDefaults] objectForKey:@"timer"];
     NSLog(@"%@",LocationMe);
     
@@ -289,13 +297,13 @@
     {
         [[NSUserDefaults standardUserDefaults] setObject:@"120" forKey:UPDATION_INTERVEL];
     }
-
-    BOOL enabled;
-           //demo
-        enabled = [defaults boolForKey:@"enabled_preference"];
     
-        [[NSUserDefaults standardUserDefaults]setBool:[defaults boolForKey:@"enabled_preference"] forKey:@"demo"];
-      
+    BOOL enabled;
+    //demo
+    enabled = [defaults boolForKey:@"enabled_preference"];
+    
+    [[NSUserDefaults standardUserDefaults]setBool:[defaults boolForKey:@"enabled_preference"] forKey:@"demo"];
+    
     [[NSUserDefaults standardUserDefaults]setBool:[defaults boolForKey:@"demo"] forKey:K_CURR_DEMO_VALUE];
     if ([[[NSUserDefaults standardUserDefaults]valueForKey:K_CURR_DEMO_VALUE]  isEqual:@"0"]) {
         prevValue=@"0";
@@ -305,10 +313,10 @@
     
     NSLog(@"%@",[[NSUserDefaults standardUserDefaults]valueForKey:K_CURR_DEMO_VALUE]);
     NSLog(@"%@",[[NSUserDefaults standardUserDefaults]valueForKey:K_PREV_DEMO_VALUE]);
-//    if (!([[NSUserDefaults standardUserDefaults]valueForKey:K_PREV_DEMO_VALUE]==[[NSUserDefaults standardUserDefaults]valueForKey:K_CURR_DEMO_VALUE]))
-         if (![[[NSUserDefaults standardUserDefaults]valueForKey:@"login"]length])
-    
-         {
+    //    if (!([[NSUserDefaults standardUserDefaults]valueForKey:K_PREV_DEMO_VALUE]==[[NSUserDefaults standardUserDefaults]valueForKey:K_CURR_DEMO_VALUE]))
+    if (![[[NSUserDefaults standardUserDefaults]valueForKey:@"login"]length])
+        
+    {
         //remove nususer defaults value..
         
         [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"login"];
@@ -322,7 +330,7 @@
         [AppDelegate appDelegate].window.rootViewController = [AppDelegate appDelegate].mainNavigationController;
         [AppDelegate appDelegate].mainNavigationController.navigationBarHidden=YES;
         [[AppDelegate appDelegate].window makeKeyAndVisible];
-
+        
         
         prevValue=[[NSUserDefaults standardUserDefaults]valueForKey:K_CURR_DEMO_VALUE];
         [[NSUserDefaults standardUserDefaults]setObject:prevValue  forKey:K_PREV_DEMO_VALUE];
@@ -353,10 +361,10 @@
         
         
     }
-
+    
     self.mainNavigationController.navigationBarHidden=YES;
     [self.window makeKeyAndVisible];
-
+    
     
 }
 

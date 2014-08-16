@@ -12,18 +12,21 @@
 #import "MenuViewController.h"
 #import "Tablereload.h"
 
-@interface RecentPaymentViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,NSURLConnectionDataDelegate>
+@interface RecentPaymentViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,NSURLConnectionDataDelegate,UIAlertViewDelegate>
 
 {
-   
+    
     IBOutlet UILabel *address_lbl,*locationcode_lbl,*amt_lbl,*address_lbl1;
     NSIndexPath * swiped_Index;
     NSString *common;
     IBOutlet UIActivityIndicatorView *act_view;
+    IBOutlet UIImageView *Nav_view;
+    
     
 }
+-(void)fetchRecentPayment;
 -(void)myTVReloadMethod;
-@property (nonatomic, strong) id Delegate; 
+@property (nonatomic, strong) id Delegate;
 @property (strong,nonatomic) IBOutlet UITableView *Table;
 @property(strong,nonatomic)NSString *address,*locationcode,*amt,*lot_id;
 @property (strong, nonatomic) MFSideMenuContainerViewController *container;

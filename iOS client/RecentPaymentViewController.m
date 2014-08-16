@@ -16,6 +16,8 @@
     NSMutableArray *insert;
     BOOL isSet;
     NSMutableArray *aa;
+    int update_interval;
+    NSTimer *timer;
 }
 @end
 
@@ -42,11 +44,11 @@
     // Do any additional setup after loading the view from its nib.
     
     //set the value for label
-       act_view.hidden=YES;
+    act_view.hidden=YES;
     locationcode_lbl.text=[NSString stringWithFormat:@":%@",[[NSUserDefaults standardUserDefaults]valueForKey:@"locationcode"]];
     amt_lbl.text=[NSString stringWithFormat:@"$%@",[[NSUserDefaults standardUserDefaults]valueForKey:@"amt"]];
     address_lbl.text=[NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults]valueForKey:@"address"]];
-   // address_lbl.lineBreakMode = NSLineBreakByWordWrapping;
+    // address_lbl.lineBreakMode = NSLineBreakByWordWrapping;
     address_lbl1.text=[[NSUserDefaults standardUserDefaults]valueForKey:@"addr1"];
     isSet=NO;
     //address_lbl.numberOfLines = 0;
@@ -68,16 +70,23 @@
     [_Table addSubview:refreshControl];
     
     
-    NSTimer *timer;
-     int update_interval = [[[NSUserDefaults standardUserDefaults] objectForKey:UPDATION_INTERVEL] intValue];
-    NSLog(@"update_interval---%d",update_interval);
-    timer=[NSTimer scheduledTimerWithTimeInterval:update_interval target:self selector:@selector(fetchRecentPayment1) userInfo:nil repeats:YES];
-
+    
+    
     
 }
 - (void)refresh:(id)sender {
     
     // Reload Table View
+    if (![AppDelegate isNetworkAvailable]) {
+        
+        _Table.hidden=YES;
+        if (timer.isValid) {
+            [timer invalidate];
+        }
+        timer = nil;
+        [AppDelegate Reachabiltyalert];
+        return ;
+    }
     [self fetchRecentPayment];
     [(UIRefreshControl *)sender endRefreshing];
 }
@@ -109,7 +118,7 @@
         [min_lbl setBackgroundColor:[UIColor clearColor]];
         [min_lbl setFont:[UIFont fontWithName:@"Avenir" size:12]];
         [scrollView addSubview:min_lbl];
-;
+        ;
         
         UILabel *Name_lbl = [[UILabel alloc] initWithFrame:CGRectMake(27.5,15,200,20)];
         [Name_lbl setTag:2];
@@ -117,12 +126,12 @@
         [Name_lbl setBackgroundColor:[UIColor clearColor]];
         [Name_lbl setFont:[UIFont fontWithName:@"Avenir-Black" size:25]];
         [scrollView addSubview:Name_lbl];
-;
+        ;
         
         UIImageView *key=[[UIImageView alloc]initWithFrame:CGRectMake(27.5, 42.5, 14, 14)];
         key.image=[UIImage imageNamed:@"recent_key_icon.png"];
         [scrollView addSubview:key];
-;
+        ;
         
         UILabel *CarName_lbl = [[UILabel alloc] initWithFrame:CGRectMake(43,40.5,200,20)];
         [CarName_lbl setTag:3];
@@ -130,12 +139,12 @@
         [CarName_lbl setBackgroundColor:[UIColor clearColor]];
         [CarName_lbl setFont:[UIFont fontWithName:@"Avenir" size:13]];
         [scrollView addSubview:CarName_lbl];
-;
+        ;
         
         UIImageView *star=[[UIImageView alloc]initWithFrame:CGRectMake(27.5, 65, 14, 14)];
         star.image=[UIImage imageNamed:@"recent_star_icon.png"];
         [scrollView addSubview:star];
-;
+        ;
         
         UILabel *CarNumber_lbl = [[UILabel alloc] initWithFrame:CGRectMake(43,63,200,20)];
         [CarNumber_lbl setTag:4];
@@ -143,12 +152,12 @@
         [CarNumber_lbl setBackgroundColor:[UIColor clearColor]];
         [CarNumber_lbl setFont:[UIFont fontWithName:@"Avenir-Black" size:14]];
         [scrollView addSubview:CarNumber_lbl];
-;
+        ;
         
         UIImageView *clk=[[UIImageView alloc]initWithFrame:CGRectMake(27.5, 95, 14, 14)];
         clk.image=[UIImage imageNamed:@"recent_clock_icon.png"];
         [scrollView addSubview:clk];
-;
+        ;
         
         UILabel *Time_lbl = [[UILabel alloc] initWithFrame:CGRectMake(43,93,200,20)];
         [Time_lbl setTag:5];
@@ -156,7 +165,7 @@
         [Time_lbl setBackgroundColor:[UIColor clearColor]];
         [Time_lbl setFont:[UIFont fontWithName:@"Avenir" size:14]];
         [scrollView addSubview:Time_lbl];
-;
+        ;
         
         UILabel *amt1 = [[UILabel alloc] initWithFrame:CGRectMake(252,65,100,20)];
         [amt1 setTag:7];
@@ -164,17 +173,17 @@
         [amt1 setBackgroundColor:[UIColor clearColor]];
         [amt1 setFont:[UIFont fontWithName:@"Avenir-Black" size:13]];
         [scrollView addSubview:amt1];
-;
+        ;
         
         UILabel *amtfloat = [[UILabel alloc] initWithFrame:CGRectMake(266,88,50,20)];
         [amtfloat setTag:8];
-      //  amtfloat.textAlignment=NSTextAlignmentCenter;
-       // amtfloat.backgroundColor=[UIColor redColor];
+        //  amtfloat.textAlignment=NSTextAlignmentCenter;
+        // amtfloat.backgroundColor=[UIColor redColor];
         amtfloat.textColor = [UIColor greenColor];
         [amtfloat setBackgroundColor:[UIColor clearColor]];
         [amtfloat setFont:[UIFont fontWithName:@"Avenir-Black" size:13]];
         [scrollView addSubview:amtfloat];
-;
+        ;
         
         UILabel *amtmain = [[UILabel alloc] initWithFrame:CGRectMake(218,93,50,20)];
         [amtmain setTag:6];
@@ -185,26 +194,14 @@
         [scrollView addSubview:amtmain];
         
         [cell.contentView addSubview:scrollView];
-
-    
+        
+        
     }
-
+    
     UIView *separatorView = [[UIView alloc] initWithFrame:CGRectMake(0, 123, 1024, 1)];
     separatorView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     separatorView.layer.borderWidth = 1.0;
     [cell.contentView addSubview:separatorView];
-//    // Swipe Left
-//    UISwipeGestureRecognizer * Swipeleft=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeleft:)];
-//    Swipeleft.direction=UISwipeGestureRecognizerDirectionLeft;
-//    [cell addGestureRecognizer:Swipeleft];
-    
-    
-    // SwipeRight
-//    UISwipeGestureRecognizer * Swiperight=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swiperight:)];
-//    Swiperight.direction=UISwipeGestureRecognizerDirectionRight;
-//    [cell addGestureRecognizer:Swiperight];
-    
-    
     
     [(UILabel *)[cell.contentView viewWithTag:1] setFrame:CGRectMake(252,5,100, 20)];
     NSString *lastViewedString = [[insert objectAtIndex:indexPath.row] valueForKey:@"UTCDateTime"] ;
@@ -264,15 +261,15 @@
     double num = [[[insert objectAtIndex:indexPath.row ] valueForKey:@"TotalAmount"]doubleValue];
     int intpart = (int)num;
     float decpart = num - intpart;
-
+    
     NSString *str=[NSString stringWithFormat:@"%.2f",decpart];
     
     NSArray *array=[str componentsSeparatedByString:@"."];
     
-
+    
     if (decpart==0.0000) {
         [(UILabel *)[cell.contentView viewWithTag:6] setText:[NSString stringWithFormat:@"$%d",intpart]];
-
+        
     }
     else{
         [(UILabel *)[cell.contentView viewWithTag:6] setText:[NSString stringWithFormat:@"$%d",intpart]];
@@ -296,36 +293,36 @@
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 
 {
-
+    
     BOOL enabled=[[[NSUserDefaults standardUserDefaults]valueForKeyPath:@"refresh"]integerValue];
     if (enabled ==0 && (![[NSUserDefaults standardUserDefaults]valueForKey:@"last"]))
     {
         [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"deleted"];
-    if (scrollView == _Table) {
-        return;
-    }
-    UITableViewCell * cell = (UITableViewCell*) [[[scrollView superview] superview] superview];
-    
-    swiped_Index = (NSIndexPath*)[_Table indexPathForCell:cell];
-  
+        if (scrollView == _Table) {
+            return;
+        }
+        UITableViewCell * cell = (UITableViewCell*) [[[scrollView superview] superview] superview];
+        
+        swiped_Index = (NSIndexPath*)[_Table indexPathForCell:cell];
+        
         NSString *paymentid=[[insert objectAtIndex:swiped_Index.row]valueForKey:@"PaymentId"];
-    [insert removeObjectAtIndex:swiped_Index.row];
-    
-    [_Table beginUpdates];
-    
-    [_Table deleteRowsAtIndexPaths:[[NSArray alloc] initWithObjects:swiped_Index, nil] withRowAnimation:UITableViewRowAnimationFade];
-    
-    [_Table endUpdates];
-    
+        [insert removeObjectAtIndex:swiped_Index.row];
+        
+        [_Table beginUpdates];
+        
+        [_Table deleteRowsAtIndexPaths:[[NSArray alloc] initWithObjects:swiped_Index, nil] withRowAnimation:UITableViewRowAnimationFade];
+        
+        [_Table endUpdates];
+        
         dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             
-               [self fetchcheckout:paymentid];
-           
+            [self fetchcheckout:paymentid];
+            
         });
-
-    
+        
+        
     }
- 
+    
 }
 
 
@@ -346,7 +343,6 @@
 
 - (void)TableSelected:(NSString *)table
 {
-     NSLog(@"dfdfdfdf-----%@",table);
     [self fetchRecentPayment];
     // only change the main display if an animal/image was selected
     if (table)
@@ -361,13 +357,7 @@
 -(IBAction)slideItLeft:(id)sender
 {
     [[AppDelegate appDelegate] leftSideMenuButtonPressed:nil];
-//    if ([[NSUserDefaults standardUserDefaults]valueForKey:@"last"]) {
-//        
-//        [self fetchRecentPayment];
-//    }
-//    else if([[NSUserDefaults standardUserDefaults]valueForKey:@"Recent"]){
-//        [self fetchRecentPayment];
-//    }
+    
     
 }
 
@@ -377,98 +367,129 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)SelfTimer
+{
+    update_interval = [[[NSUserDefaults standardUserDefaults] objectForKey:UPDATION_INTERVEL] intValue];
+    timer=[NSTimer scheduledTimerWithTimeInterval:update_interval target:self selector:@selector(fetchRecentPayment1) userInfo:nil repeats:YES];
+}
+-(void)Reachabiltyalert
+{
+    
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Network Unreachable" message:@"Check your network Connection" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
+    [alert show];
+}
 -(void)fetchRecentPayment1
 {
-     BOOL enabled=[[[NSUserDefaults standardUserDefaults]valueForKeyPath:@"deleted"]integerValue];
+    BOOL enabled=[[[NSUserDefaults standardUserDefaults]valueForKeyPath:@"deleted"]integerValue];
     if (enabled==0)
     {
-    if (![AppDelegate isNetworkAvailable]) {
-        _Table.hidden=YES;
-        
-        [AppDelegate Reachabiltyalert];
-        return ;
-    }
-    [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"refresh"];
-    //call the API
-     //  _Table.userInteractionEnabled=NO;
-    if (![[NSUserDefaults standardUserDefaults]valueForKey:@"last"]) {
-        act_view.hidden=NO;
-        [act_view startAnimating];
-
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        __block    NSString *parameter;
-            dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                parameter=[NSString stringWithFormat:@"valetlot_id=%@&client=mobile&Status=0",[[NSUserDefaults standardUserDefaults]valueForKey:@"lot_id"]];
-                if (![AppDelegate isNetworkAvailable]) {
-                    _Table.hidden=YES;
+        if (![AppDelegate isNetworkAvailable]) {
+            
+            _Table.hidden=YES;
+            
+            if (timer.isValid) {
+                [timer invalidate];
+            }
+            timer = nil;
+            [AppDelegate Reachabiltyalert];
+            return ;
+        }
+        [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"refresh"];
+        //call the API
+        //  _Table.userInteractionEnabled=NO;
+        if (![[NSUserDefaults standardUserDefaults]valueForKey:@"last"]) {
+            act_view.hidden=NO;
+            [act_view startAnimating];
+            
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                __block    NSString *parameter;
+                dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                    parameter=[NSString stringWithFormat:@"valetlot_id=%@&client=mobile&Status=0",[[NSUserDefaults standardUserDefaults]valueForKey:@"lot_id"]];
+                    if (![AppDelegate isNetworkAvailable]) {
+                        _Table.hidden=YES;
+                        if (timer.isValid) {
+                            [timer invalidate];
+                        }
+                        timer = nil;
+                        
+                        [AppDelegate Reachabiltyalert];
+                        return ;
+                    }
+                    insert= [[[AppDelegate downLoadFrom:[NSString stringWithFormat:@"fetch_valet_transactions.php"] parameters:parameter]valueForKey:@"result"]mutableCopy];
+                });
+                dispatch_sync(dispatch_get_main_queue(), ^{
+                    [self SelfTimer];
+                    NSLog(@"dfdfdf%d",[insert count]);
+                    [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"user"];
+                    [act_view stopAnimating];
+                    _Table.userInteractionEnabled=YES;
+                    [_Table reloadData];
                     
-                    [AppDelegate Reachabiltyalert];
-                    return ;
-                }
- insert= [[[AppDelegate downLoadFrom:[NSString stringWithFormat:@"fetch_valet_transactions.php"] parameters:parameter]valueForKey:@"result"]mutableCopy];
-            });
-            dispatch_sync(dispatch_get_main_queue(), ^{
-                NSLog(@"dfdfdf%d",[insert count]);
-                [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"user"];
-                [act_view stopAnimating];
-                _Table.userInteractionEnabled=YES;
-                [_Table reloadData];
-
-                [[NSUserDefaults standardUserDefaults]setBool:NO forKey:@"refresh"];
+                    [[NSUserDefaults standardUserDefaults]setBool:NO forKey:@"refresh"];
+                });
+                
             });
             
-        });
-
-    }
+        }
     }
     
-  }
+}
 
 -(void)fetchRecentPayment
 {
     
     if (![AppDelegate isNetworkAvailable]) {
+        
         _Table.hidden=YES;
+        if (timer.isValid) {
+            [timer invalidate];
+        }
+        timer = nil;
         
         [AppDelegate Reachabiltyalert];
         return ;
     }
     
     
-
+    
     NSString *parameter;
     //call the API
-       NSLog(@"dfdfdf%@",[[NSUserDefaults standardUserDefaults]valueForKey:@"last"]);
-
+    NSLog(@"dfdfdf%@",[[NSUserDefaults standardUserDefaults]valueForKey:@"last"]);
+    [self SelfTimer];
+    
     if (![[NSUserDefaults standardUserDefaults]valueForKey:@"last"]) {
-        
+        Nav_view.image=[UIImage imageNamed:@"nav_recent.png"];
         parameter=[NSString stringWithFormat:@"valetlot_id=%@&client=mobile&Status=0",[[NSUserDefaults standardUserDefaults]valueForKey:@"lot_id"]];
         [[NSUserDefaults standardUserDefaults]setBool:NO forKey:@"deleted"];
-           }
+    }
     else{
+        Nav_view.image=[UIImage imageNamed:@"All Payments.png"];
+        
         parameter=[NSString stringWithFormat:@"valetlot_id=%@&client=mobile",[[NSUserDefaults standardUserDefaults]valueForKey:@"lot_id"]];
     }
     insert= [[[AppDelegate downLoadFrom:[NSString stringWithFormat:@"fetch_valet_transactions.php"] parameters:parameter]valueForKey:@"result"]mutableCopy];
     NSLog(@"dfdfdf%@",insert);
     _Table.userInteractionEnabled=YES;
-
+    
     [_Table reloadData];
 }
 -(void)myTVReloadMethod {
-   [_Table reloadData];
+    [_Table reloadData];
 }
 -(void)fetchcheckout:(NSString *)paymentid
 {
     
     if (![AppDelegate isNetworkAvailable]) {
         
+        // _Table.hidden=YES;
+        [timer invalidate];
+        timer=nil;
+        
         [AppDelegate Reachabiltyalert];
         return ;
-        
     }
-   
+    
     if (![[NSUserDefaults standardUserDefaults]valueForKey:@"last"]) {
-        NSLog(@"dsdsds-------%@",  paymentid);
         NSString *parameter=[NSString stringWithFormat:@"PaymentId=%@&Status=1",paymentid];
         
         NSMutableArray *  fetch =[[NSMutableArray alloc]init];
@@ -476,7 +497,6 @@
         
         fetch= [[[AppDelegate downLoadFrom:[NSString stringWithFormat:@"checkout_customer.php"] parameters:parameter]valueForKey:@"result"]mutableCopy];
         
-        NSLog(@"dfdfdf%@",fetch);
         [self fetchRecentPayment];
         
     }
