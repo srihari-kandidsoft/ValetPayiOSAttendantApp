@@ -12,6 +12,8 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate,UIAlertViewDelegate>
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) LoginViewController *login;
+@property (strong, nonatomic)     UIAlertView *alert ;
+;
 
 //@property (strong, nonatomic) CLLocation *current_Location;
 

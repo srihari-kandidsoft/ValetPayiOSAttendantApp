@@ -42,7 +42,7 @@
 			<key>Key</key>
 			<string>timer</string>
 			<key>DefaultValue</key>
-			<string>0</string>
+			<string>1</string>
 			<key>Titles</key>
 			<array>
 				<string>5 sec</string>

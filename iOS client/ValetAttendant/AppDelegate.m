@@ -29,7 +29,7 @@
     // Replace YOUR_API_KEY with the api key in the downloaded package
     
     [Flurry startSession:@"H5FJ2MFMCMCPKXTQCKJQ"];
-
+[[NSUserDefaults standardUserDefaults]setBool:NO forKey:@"IsNetworkReachabilityAlertVisible"];
     NSLog(@"dfdfdfdf%lu",(unsigned long)[[[NSUserDefaults standardUserDefaults]valueForKey:@"login"]length ]);
     // Override point for customization after application launch.
     if (![[[NSUserDefaults standardUserDefaults]valueForKey:@"login"]length ] || !([[NSUserDefaults standardUserDefaults]valueForKey:K_PREV_DEMO_VALUE]==[[NSUserDefaults standardUserDefaults]valueForKey:K_CURR_DEMO_VALUE])) {
@@ -187,6 +187,7 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
     //remove local value
+    
     [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"last"];
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
@@ -196,7 +197,7 @@
 {
     //remove local value
     [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"last"];
-    
+    [[NSUserDefaults standardUserDefaults]setBool:NO forKey:@"IsNetworkReachabilityAlertVisible"];
     [self registerDefaultsFromSettingsBundle];
     
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
@@ -225,7 +226,11 @@
     if ((internetStatus != ReachableViaWiFi) && (internetStatus != ReachableViaWWAN))
         
     {
+        if (![[NSUserDefaults standardUserDefaults]boolForKey:@"IsNetworkReachabilityAlertVisible"]) {
         
+        [AppDelegate Reachabiltyalert];
+        [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"IsNetworkReachabilityAlertVisible"];
+        }
         return NO;
         
     }
@@ -239,20 +244,27 @@
     }
     
 }
++ (void)dismissWithClickedButtonIndex:(NSInteger)buttonIndex animated:(BOOL)animated
+{
+    
+}
+
 + (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if (buttonIndex==1) {
-        
+    if (buttonIndex==0) {
+        AppDelegate *app=[[AppDelegate alloc]init];
+        [app.alert removeFromSuperview];
+
         RecentPaymentViewController *recen=[[RecentPaymentViewController alloc]init];
-        
+        [[NSUserDefaults standardUserDefaults]setBool:NO forKey:@"IsNetworkReachabilityAlertVisible"];
         [recen fetchRecentPayment];
     }
 }
 +(void)Reachabiltyalert
 {
-    
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Network Unreachable" message:@"Check your network Connection" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Retry",nil];
-    [alert show];
+    AppDelegate *app=[[AppDelegate alloc]init];
+  app.alert = [[UIAlertView alloc]initWithTitle:@"Network Unreachable" message:@"Check your network Connection" delegate:self cancelButtonTitle:@"Retry" otherButtonTitles:nil];
+    [ app.alert show];
 }
 
 

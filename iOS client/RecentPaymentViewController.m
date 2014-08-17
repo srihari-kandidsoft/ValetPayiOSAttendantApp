@@ -42,8 +42,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-    //set the value for label
+        //set the value for label
     act_view.hidden=YES;
     locationcode_lbl.text=[NSString stringWithFormat:@":%@",[[NSUserDefaults standardUserDefaults]valueForKey:@"locationcode"]];
     amt_lbl.text=[NSString stringWithFormat:@"$%@",[[NSUserDefaults standardUserDefaults]valueForKey:@"amt"]];
@@ -53,7 +52,6 @@
     isSet=NO;
     //address_lbl.numberOfLines = 0;
     //[address_lbl sizeToFit];
-    [self fetchRecentPayment];
     self.navigationController.navigationBarHidden=YES;
     [self setNeedsStatusBarAppearanceUpdate];
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
@@ -69,25 +67,27 @@
     
     [_Table addSubview:refreshControl];
     
-    
-    
-    
-    
-}
-- (void)refresh:(id)sender {
-    
-    // Reload Table View
     if (![AppDelegate isNetworkAvailable]) {
         
         _Table.hidden=YES;
         if (timer.isValid) {
             [timer invalidate];
         }
-        timer = nil;
-        [AppDelegate Reachabiltyalert];
+        [act_view stopAnimating];
+        act_view.hidden=YES;
         return ;
     }
+
     [self fetchRecentPayment];
+
+    
+    
+}
+- (void)refresh:(id)sender {
+    
+    // Reload Table View
+    [self fetchRecentPayment];
+
     [(UIRefreshControl *)sender endRefreshing];
 }
 -(UIStatusBarStyle)preferredStatusBarStyle{
@@ -390,15 +390,12 @@
             if (timer.isValid) {
                 [timer invalidate];
             }
-            timer = nil;
-            [AppDelegate Reachabiltyalert];
             return ;
         }
         [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"refresh"];
         //call the API
         //  _Table.userInteractionEnabled=NO;
         if (![[NSUserDefaults standardUserDefaults]valueForKey:@"last"]) {
-            act_view.hidden=NO;
             [act_view startAnimating];
             
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -410,15 +407,16 @@
                         if (timer.isValid) {
                             [timer invalidate];
                         }
-                        timer = nil;
-                        
+                        [act_view stopAnimating];
+                        act_view.hidden=YES;
                         [AppDelegate Reachabiltyalert];
                         return ;
                     }
+                    act_view.hidden=NO;
+
                     insert= [[[AppDelegate downLoadFrom:[NSString stringWithFormat:@"fetch_valet_transactions.php"] parameters:parameter]valueForKey:@"result"]mutableCopy];
                 });
                 dispatch_sync(dispatch_get_main_queue(), ^{
-                    [self SelfTimer];
                     NSLog(@"dfdfdf%d",[insert count]);
                     [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"user"];
                     [act_view stopAnimating];
@@ -444,9 +442,8 @@
         if (timer.isValid) {
             [timer invalidate];
         }
-        timer = nil;
-        
-        [AppDelegate Reachabiltyalert];
+        [act_view stopAnimating];
+        act_view.hidden=YES;
         return ;
     }
     
@@ -483,9 +480,7 @@
         
         // _Table.hidden=YES;
         [timer invalidate];
-        timer=nil;
         
-        [AppDelegate Reachabiltyalert];
         return ;
     }
     

@@ -44,7 +44,7 @@
         NSLog(@"sssdsd----%@",insert);
     if (![insert isEqual:@"failed"]) {
         [[NSUserDefaults standardUserDefaults]setObject:email_id.text forKey:@"login"];
-        
+        [[NSUserDefaults standardUserDefaults]setBool:NO forKey:@"IsNetworkReachabilityAlertVisible"];
        RecentPaymentViewController *recent=[[RecentPaymentViewController alloc]initWithNibName:@"RecentPaymentViewController" bundle:nil];
     
     [AppDelegate appDelegate].mainNavigationController = [[UINavigationController alloc]initWithRootViewController:recent];
