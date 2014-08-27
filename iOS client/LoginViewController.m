@@ -33,7 +33,7 @@
         
     }
     if (![email_id.text length] || ![pwd.text length]) {
-        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"" message:@"Please Enter All Fieldes!" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles: nil];
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"" message:@"Valet code or password incorrect" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
     }
     else{
@@ -70,11 +70,11 @@
         [[NSUserDefaults standardUserDefaults]setObject:recent.amt forKey:@"amt"];
         [[NSUserDefaults standardUserDefaults]setObject:recent.locationcode forKey:@"locationcode"];
         [[NSUserDefaults standardUserDefaults]setObject:recent.lot_id forKey:@"lot_id"];
-        [[NSUserDefaults standardUserDefaults]setObject:[NSString stringWithFormat:@"%@ , %@ %@",[insert valueForKey:@"City"],[insert valueForKey:@"State"],[insert valueForKey:@"Zipcode"]] forKey:@"addr1"];
+        [[NSUserDefaults standardUserDefaults]setObject:[NSString stringWithFormat:@"%@, %@ %@",[insert valueForKey:@"City"],[insert valueForKey:@"State"],[insert valueForKey:@"Zipcode"]] forKey:@"addr1"];
 
     }
     else{
-        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"" message:@"Check username or password" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles: nil];
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"" message:@"Valet code or password incorrect" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
     }
     }

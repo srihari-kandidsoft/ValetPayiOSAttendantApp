@@ -44,7 +44,7 @@
     // Do any additional setup after loading the view from its nib.
         //set the value for label
     act_view.hidden=YES;
-    locationcode_lbl.text=[NSString stringWithFormat:@":%@",[[NSUserDefaults standardUserDefaults]valueForKey:@"locationcode"]];
+    locationcode_lbl.text=[NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults]valueForKey:@"locationcode"]];
     amt_lbl.text=[NSString stringWithFormat:@"$%@",[[NSUserDefaults standardUserDefaults]valueForKey:@"amt"]];
     address_lbl.text=[NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults]valueForKey:@"address"]];
     // address_lbl.lineBreakMode = NSLineBreakByWordWrapping;
@@ -53,7 +53,7 @@
     //address_lbl.numberOfLines = 0;
     //[address_lbl sizeToFit];
     self.navigationController.navigationBarHidden=YES;
-    [self setNeedsStatusBarAppearanceUpdate];
+
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     
     // _is_btnClicked_enabled_1=YES;

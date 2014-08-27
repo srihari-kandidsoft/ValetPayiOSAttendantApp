@@ -78,9 +78,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     //[self setNeedsStatusBarAppearanceUpdate];
-    
-    [self setNeedsStatusBarAppearanceUpdate];
-    
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
