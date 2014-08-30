@@ -301,7 +301,13 @@
         if (scrollView == _Table) {
             return;
         }
-        UITableViewCell * cell = (UITableViewCell*) [[[scrollView superview] superview] superview];
+        
+        UIView *view = scrollView;
+        while (view != nil && ![view isKindOfClass:[UITableViewCell class]]) {
+            view = [view superview];
+        }
+        
+        UITableViewCell * cell = (UITableViewCell*) view;
         
         swiped_Index = (NSIndexPath*)[_Table indexPathForCell:cell];
         
