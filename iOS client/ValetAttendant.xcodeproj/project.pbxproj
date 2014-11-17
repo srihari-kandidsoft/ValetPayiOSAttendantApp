@@ -17,11 +17,6 @@
 		8C4F5A6418D2C2EF00104AB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A6218D2C2EF00104AB0 /* Main.storyboard */; };
 		8C4F5A6718D2C2EF00104AB0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4F5A6618D2C2EF00104AB0 /* ViewController.m */; };
 		8C4F5A6918D2C2EF00104AB0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A6818D2C2EF00104AB0 /* Images.xcassets */; };
-		8C4F5A7018D2C2EF00104AB0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4F5A6F18D2C2EF00104AB0 /* XCTest.framework */; };
-		8C4F5A7118D2C2EF00104AB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4F5A5018D2C2EF00104AB0 /* Foundation.framework */; };
-		8C4F5A7218D2C2EF00104AB0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4F5A5418D2C2EF00104AB0 /* UIKit.framework */; };
-		8C4F5A7A18D2C2EF00104AB0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A7818D2C2EF00104AB0 /* InfoPlist.strings */; };
-		8C4F5A7C18D2C2EF00104AB0 /* ValetAttendantTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4F5A7B18D2C2EF00104AB0 /* ValetAttendantTests.m */; };
 		8C4F5A9F18D2C92700104AB0 /* common_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A8618D2C92700104AB0 /* common_bg.png */; };
 		8C4F5AA018D2C92700104AB0 /* common_bg_iph4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A8718D2C92700104AB0 /* common_bg_iph4@2x.png */; };
 		8C4F5AA118D2C92700104AB0 /* common_bg_iph5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F5A8818D2C92700104AB0 /* common_bg_iph5@2x.png */; };
@@ -107,16 +102,6 @@
 		CB704E16198C7FB800ADE55E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB704E15198C7FB800ADE55E /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		8C4F5A7318D2C2EF00104AB0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8C4F5A4518D2C2EF00104AB0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8C4F5A4C18D2C2EF00104AB0;
-			remoteInfo = ValetAttendant;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		8C19A14A190E067F00C4EDD0 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		8C19A14B190E067F00C4EDD0 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
@@ -134,11 +119,7 @@
 		8C4F5A6518D2C2EF00104AB0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8C4F5A6618D2C2EF00104AB0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8C4F5A6818D2C2EF00104AB0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		8C4F5A6E18D2C2EF00104AB0 /* ValetAttendantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValetAttendantTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C4F5A6F18D2C2EF00104AB0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		8C4F5A7718D2C2EF00104AB0 /* ValetAttendantTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ValetAttendantTests-Info.plist"; sourceTree = "<group>"; };
-		8C4F5A7918D2C2EF00104AB0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8C4F5A7B18D2C2EF00104AB0 /* ValetAttendantTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ValetAttendantTests.m; sourceTree = "<group>"; };
 		8C4F5A8618D2C92700104AB0 /* common_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_bg.png; sourceTree = "<group>"; };
 		8C4F5A8718D2C92700104AB0 /* common_bg_iph4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_bg_iph4@2x.png"; sourceTree = "<group>"; };
 		8C4F5A8818D2C92700104AB0 /* common_bg_iph5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_bg_iph5@2x.png"; sourceTree = "<group>"; };
@@ -245,16 +226,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C4F5A6B18D2C2EF00104AB0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8C4F5A7018D2C2EF00104AB0 /* XCTest.framework in Frameworks */,
-				8C4F5A7218D2C2EF00104AB0 /* UIKit.framework in Frameworks */,
-				8C4F5A7118D2C2EF00104AB0 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -292,7 +263,6 @@
 				8CBDE50718FE9B9F007D3B96 /* LoginViewController.xib */,
 				8CBDE4F518FE973E007D3B96 /* MFSideMenu */,
 				8C4F5A5618D2C2EF00104AB0 /* ValetAttendant */,
-				8C4F5A7518D2C2EF00104AB0 /* ValetAttendantTests */,
 				8C4F5A4F18D2C2EF00104AB0 /* Frameworks */,
 				8C4F5A4E18D2C2EF00104AB0 /* Products */,
 			);
@@ -303,7 +273,6 @@
 			isa = PBXGroup;
 			children = (
 				8C4F5A4D18D2C2EF00104AB0 /* ValetAttendant.app */,
-				8C4F5A6E18D2C2EF00104AB0 /* ValetAttendantTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -341,24 +310,6 @@
 				8C4F5A5918D2C2EF00104AB0 /* InfoPlist.strings */,
 				8C4F5A5C18D2C2EF00104AB0 /* main.m */,
 				8C4F5A5E18D2C2EF00104AB0 /* ValetAttendant-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		8C4F5A7518D2C2EF00104AB0 /* ValetAttendantTests */ = {
-			isa = PBXGroup;
-			children = (
-				8C4F5A7B18D2C2EF00104AB0 /* ValetAttendantTests.m */,
-				8C4F5A7618D2C2EF00104AB0 /* Supporting Files */,
-			);
-			path = ValetAttendantTests;
-			sourceTree = "<group>";
-		};
-		8C4F5A7618D2C2EF00104AB0 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8C4F5A7718D2C2EF00104AB0 /* ValetAttendantTests-Info.plist */,
-				8C4F5A7818D2C2EF00104AB0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -549,24 +500,6 @@
 			productReference = 8C4F5A4D18D2C2EF00104AB0 /* ValetAttendant.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8C4F5A6D18D2C2EF00104AB0 /* ValetAttendantTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8C4F5A8218D2C2EF00104AB0 /* Build configuration list for PBXNativeTarget "ValetAttendantTests" */;
-			buildPhases = (
-				8C4F5A6A18D2C2EF00104AB0 /* Sources */,
-				8C4F5A6B18D2C2EF00104AB0 /* Frameworks */,
-				8C4F5A6C18D2C2EF00104AB0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8C4F5A7418D2C2EF00104AB0 /* PBXTargetDependency */,
-			);
-			name = ValetAttendantTests;
-			productName = ValetAttendantTests;
-			productReference = 8C4F5A6E18D2C2EF00104AB0 /* ValetAttendantTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -578,9 +511,6 @@
 				TargetAttributes = {
 					8C4F5A4C18D2C2EF00104AB0 = {
 						DevelopmentTeam = Z9YZS48247;
-					};
-					8C4F5A6D18D2C2EF00104AB0 = {
-						TestTargetID = 8C4F5A4C18D2C2EF00104AB0;
 					};
 				};
 			};
@@ -598,7 +528,6 @@
 			projectRoot = "";
 			targets = (
 				8C4F5A4C18D2C2EF00104AB0 /* ValetAttendant */,
-				8C4F5A6D18D2C2EF00104AB0 /* ValetAttendantTests */,
 			);
 		};
 /* End PBXProject section */
@@ -689,14 +618,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C4F5A6C18D2C2EF00104AB0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8C4F5A7A18D2C2EF00104AB0 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -718,23 +639,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C4F5A6A18D2C2EF00104AB0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8C4F5A7C18D2C2EF00104AB0 /* ValetAttendantTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8C4F5A7418D2C2EF00104AB0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8C4F5A4C18D2C2EF00104AB0 /* ValetAttendant */;
-			targetProxy = 8C4F5A7318D2C2EF00104AB0 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8C4F5A5918D2C2EF00104AB0 /* InfoPlist.strings */ = {
@@ -751,14 +656,6 @@
 				8C4F5A6318D2C2EF00104AB0 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8C4F5A7818D2C2EF00104AB0 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8C4F5A7918D2C2EF00104AB0 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -900,48 +797,6 @@
 			};
 			name = Release;
 		};
-		8C4F5A8318D2C2EF00104AB0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ValetAttendant.app/ValetAttendant";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ValetAttendant/ValetAttendant-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "ValetAttendantTests/ValetAttendantTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		8C4F5A8418D2C2EF00104AB0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ValetAttendant.app/ValetAttendant";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ValetAttendant/ValetAttendant-Prefix.pch";
-				INFOPLIST_FILE = "ValetAttendantTests/ValetAttendantTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -959,15 +814,6 @@
 			buildConfigurations = (
 				8C4F5A8018D2C2EF00104AB0 /* Debug */,
 				8C4F5A8118D2C2EF00104AB0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8C4F5A8218D2C2EF00104AB0 /* Build configuration list for PBXNativeTarget "ValetAttendantTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8C4F5A8318D2C2EF00104AB0 /* Debug */,
-				8C4F5A8418D2C2EF00104AB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
